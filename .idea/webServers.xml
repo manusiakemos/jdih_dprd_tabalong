@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ac86fe94-71cf-4f5e-aac5-2b7a598a7593" name="jdih tabalong dprd" url="http://jdih-dprd.tabalongkab.go.id">
+        <fileTransfer host="jdih-dprd.tabalongkab.go.id" port="21" rootFolder="/public_html">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

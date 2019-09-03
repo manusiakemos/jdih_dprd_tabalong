@@ -1,0 +1,78 @@
+<?php
+
+namespace App\Repositories;
+
+
+use App\Model\Arsip;
+use App\Model\Berita;
+use Illuminate\Support\Facades\DB;
+
+class QueryRepository
+{
+    public static function terbaru($take)
+    {
+        return Arsip::with('category')
+            ->latest()
+            ->take($take);
+    }
+
+    public static function terpopuler($take)
+    {
+        return Arsip::with('category')
+            ->orderBy('arsip_hits', 'desc')
+            ->take($take);
+    }
+
+    public static function arsip($request)
+    {
+        $judul = $request->judul;
+        $jenis = $request->jenis;
+        $nomor = $request->nomor;
+        $tahun = $request->tahun;
+
+        $data = Arsip::with('category');
+        if($judul){
+            $data = $data->where('arsip_title', 'like', "%$judul%");
+        }
+        if($jenis){
+            $data = $data->where('cat_id', '=', $jenis);
+        }
+        if($nomor){
+            $data = $data->where('arsip_nomor', '=', $nomor);
+        }
+        if($tahun){
+            $data = $data->where('arsip_tahun', '=', $tahun);
+        }
+
+        return $data;
+    }
+
+    public static function berita($request)
+    {
+        $search = $request->search;
+        $data = Berita::with('category')->with('user');
+        if($search){
+            $data = $data->where('berita_judul', 'like', "%$search%")
+                ->orWhere('berita_isi', 'like', "%$search%");
+        }
+        return $data;
+    }
+
+    public static function beritaTerbaru()
+    {
+        $data = Berita::with('category')->orderBy('created_at', 'desc')
+            ->where('berita_aktif', true)
+            ->with('user');
+        return $data;
+    }
+
+    public static function beritaDetail($slug)
+    {
+        $data =  Berita::with('category')->orderBy('created_at', 'desc')
+            ->where('berita_aktif', true)
+            ->where('berita_url', $slug)
+            ->with('user');
+        return $data;
+    }
+
+}
