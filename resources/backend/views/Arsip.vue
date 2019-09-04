@@ -59,20 +59,33 @@
                 <select-category v-model="data.kategori"></select-category>
                 <small class="text-danger" v-if="this.errors.kategori">{{ this.errors.kategori.join() }}</small>
             </div>
-            <div class="form-group">
-                <label>Tahun</label>
-                <year-picker v-model="data.tahun"></year-picker>
-                <small class="text-danger" v-if="this.errors.tahun">{{ this.errors.tahun.join() }}</small>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label>Tahun Penetapan</label>
+                    <year-picker v-model="data.tahun"></year-picker>
+                    <small class="text-danger" v-if="this.errors.tahun">{{ this.errors.tahun.join() }}</small>
+                </div>
+                <div class="col-md-6">
+                    <label>Tanggal Penetapan</label>
+                    <date-picker v-model="data.tanggal"></date-picker>
+                    <small class="text-danger" v-if="this.errors.tanggal">{{ this.errors.tanggal.join() }}</small>
+                </div>
             </div>
             <div class="form-group">
+                <label>Link/Slug</label>
+                <input type="text" class="form-control" v-model="data.slug"/>
+                <small class="text-danger" v-if="this.errors.slug">{{ this.errors.slug.join() }}</small>
+            </div>
+            <!--<div class="form-group">
                 <label>Deskripsi</label>
                 <my-editor v-model="data.deskripsi"></my-editor>
                 <small class="text-danger" v-if="this.errors.deskripsi">{{ this.errors.deskripsi.join() }}</small>
-            </div>
+            </div>-->
             <div class="form-group">
                 <label for="uploadFile">Upload File</label>
                 <input type="file" class="form-control-file" id="uploadFile" ref="file"
                        v-on:change="handleFileUpload()">
+                <small class="text-danger" v-if="this.errors.file">{{ this.errors.file.join() }}</small>
             </div>
         </modal>
     </div>
@@ -86,6 +99,7 @@
     import DataTables from "../components/DataTables";
     import SelectCategory from "../components/jdih/SelectCategory";
     import YearPicker from "../components/YearPicker";
+    import DatePicker from "../components/Datepicker";
 
     export default {
         mixins: [mixin],
@@ -95,7 +109,8 @@
             MyEditor,
             DataTables,
             SelectCategory,
-            YearPicker
+            YearPicker,
+            DatePicker
         },
         created() {
             this.data2 = this.data;
@@ -111,7 +126,9 @@
                         {title: "Judul", data: "arsip_title", class:"all"},
                         {title: "Kategori", data: "category.cat_name"},
                         {title: "Nomor", data: "arsip_nomor"},
-                        {title: "Tahun", data: "arsip_tahun"},
+                        {title: "Tahun Penetapan", data: "arsip_tahun"},
+                        {title: "Tanggal Penetapan", data: "arsip_date"},
+                        {title: "Slug", data: "arsip_slug"},
                         {title: "Action", data: "action", class: "text-center all"}
                     ]
                 },
@@ -127,9 +144,11 @@
                         }
                     },
                     "judul": "",
+                    "slug": "",
                     "nomor": "",
                     "deskripsi": "",
                     "tahun": "",
+                    "tanggal": "",
                     "url_download": "#",
                     "file": "",
                     "tampilkan": "",
@@ -143,6 +162,11 @@
                 errors: [],
                 selectData: {}
             };
+        },
+        watch:{
+            'data.judul' : function (newValue, oldValue) {
+               this.data.slug = _.kebabCase(newValue);
+            }
         },
         mounted() {
             this.initActionDt();
@@ -199,8 +223,10 @@
                 formData.append('judul', this.data.judul);
                 formData.append('nomor', this.data.nomor);
                 formData.append('kategori', this.data.kategori);
+                formData.append('slug', this.data.slug);
                 formData.append('deskripsi', this.data.deskripsi);
                 formData.append('tahun', this.data.tahun);
+                formData.append('tanggal', this.data.tanggal);
                 this.sendData({
                     url: this.data.links.store,
                     method: "post",
@@ -222,9 +248,11 @@
                 formData.append('file', this.data.file);
                 formData.append('judul', this.data.judul);
                 formData.append('nomor', this.data.nomor);
+                formData.append('slug', this.data.slug);
                 formData.append('kategori', this.data.kategori);
                 formData.append('deskripsi', this.data.deskripsi);
                 formData.append('tahun', this.data.tahun);
+                formData.append('tanggal', this.data.tanggal);
                 formData.append('_method', 'PUT');
                 this.sendData({
                     url: this.data.links.update,

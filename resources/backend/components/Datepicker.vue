@@ -1,6 +1,6 @@
 <template>
 	<div class="datepicker-wrapper">
-		<date-picker value-type="format" v-model="propModel" :format="format" :type="type" :lang="lang"></date-picker>
+		<date-picker input-class="form-control" value-type="format" v-model="propModel" :format="format" :type="type" :lang="lang"></date-picker>
 	</div>
 </template>
 

@@ -5,7 +5,7 @@
         Action
     </button>
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="{{ $value['arsip_id'] }}">
-        <a target="_blank" class="dropdown-item" href="{{ url('/uploads/'.$value['arsip_filename']) }}">Preview</a>
+        <a target="_blank" class="dropdown-item" href="{{ route('arsip.download', $value['arsip_slug']) }}">Preview</a>
         <a class="dropdown-item btn-edit" href="{{ route('arsip.show', $value['arsip_id']) }}">Edit</a>
         <a class="dropdown-item btn-destroy" href="{{ route('arsip.destroy', $value['arsip_id']) }}">Hapus</a>
     </div>

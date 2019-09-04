@@ -10,9 +10,9 @@
 				 <router-link to="/profile" class="dropdown-item has-icon">
 					<i class="fas fa-user"></i> Profile
 				</router-link>
-				<!--<router-link to="/setting" class="dropdown-item has-icon">
+				<router-link to="/setting" class="dropdown-item has-icon">
 					<i class="fas fa-cog"></i> Settings
-				</router-link> -->
+				</router-link>
 				 <div class="dropdown-divider"></div>
 			</div>
 			<a href="#" class="dropdown-item has-icon text-danger" v-on:click.prevent="logout">

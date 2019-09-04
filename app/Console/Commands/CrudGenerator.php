@@ -38,9 +38,9 @@ class CrudGenerator extends Command
      */
     public function handle()
     {
-        $className = $this->argument('ClassName');
+        $className = $this->argument('ClassName', '-m');
         Artisan::call('make:model Model/'. $className);
-        Artisan::call('make:controller '. $className.'Controller');
+        Artisan::call('make:controller '. $className.'Controller -r');
         Artisan::call('make:resource '. $className.'Resource');
     }
 }

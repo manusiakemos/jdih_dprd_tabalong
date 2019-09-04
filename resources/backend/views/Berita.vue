@@ -58,8 +58,8 @@
                 <select-category type="text" v-model="data.cb_id"></select-category>
                 <small class="text-danger" v-if="this.errors.kategori">{{ this.errors.kategori.join() }}</small>
             </div>
-            <label class="text-info"> Link Generator </label>
-            <strong>{{ _slug }}</strong>
+           <!-- <label class="text-info"> Link Generator </label>
+            <strong>{{ _slug }}</strong>-->
 
             <div class="form-group">
                 <label>Link</label>
@@ -144,6 +144,11 @@
             _slug(){
                 return _.kebabCase(this.data.judul);
             }
+        },
+        watch:{
+          'data.judul':function (newValue) {
+              this.data.plain_url = _.kebabCase(newValue);
+          }
         },
         mounted() {
             this.initActionDt();

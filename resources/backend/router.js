@@ -16,6 +16,8 @@ import Arsip from './views/Arsip';
 import Berita from './views/Berita';
 import NewsCategory from './views/NewsCategory';
 
+import Setting from  './views/Setting';
+
 import Login from './views/Login';
 
 import User from './views/User';
@@ -98,13 +100,13 @@ const router = new VueRouter({
             requiresAuth: true
           }
         },
-        /*{
+        {
           path: '/setting',
           component: Setting,
           meta: {
             requiresAuth: true
           }
-        },*/
+        },
         {
           path: '/user',
           component: User,

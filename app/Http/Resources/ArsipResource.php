@@ -17,6 +17,7 @@ class ArsipResource extends JsonResource
         return array (
             'arsip_id' => $this->arsip_id,
             'kategori' => $this->cat_id,
+            'slug' => $this->arsip_slug,
             'kategori_detail' => new CategoryResource($this->category),
             'judul' => $this->arsip_title,
             'label' => $this->category->cat_name . ' Nomor ' . $this->arsip_nomor . ' Tahun ' . $this->arsip_tahun,

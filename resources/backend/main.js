@@ -90,6 +90,9 @@ const options = {
 
 Vue.use(VueHtmlToPaper, options);
 
+import ToggleButton from 'vue-js-toggle-button'
+Vue.use(ToggleButton);
+
 new Vue({
   router,
   store,

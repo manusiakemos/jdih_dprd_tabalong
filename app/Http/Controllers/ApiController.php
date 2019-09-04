@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\ArsipResource;
 use App\Http\Resources\BeritaResource;
+use App\Http\Resources\SettingResource;
 use App\Repositories\QueryRepository;
 use Illuminate\Http\Request;
 
@@ -46,5 +47,31 @@ class ApiController extends Controller
         $data->berita_hit = $data->berita_hit + 1;
         $data->save();
         return new BeritaResource($data);
+    }
+
+    public function setting()
+    {
+        $data = QueryRepository::setting()->get();
+        return SettingResource::collection($data);
+    }
+
+    public function findSetting($name)
+    {
+        $data = QueryRepository::findSetting($name)->first();
+        return new SettingResource($data);
+    }
+
+    public function download($slug)
+    {
+//        arsip_hits
+        $data = QueryRepository::getArsipBySlug($slug)->firstOrFail();
+        if ($data) {
+            $data->arsip_hits = $data->arsip_hits + 1;
+            $data->save();
+            $filePath = "uploads/{$data->arsip_filename}";
+            $headers = ['Content-Type: application/pdf'];
+            $fileName = $data->arsip_slug.".pdf";
+            return response()->file($filePath,$headers,$fileName);
+        }
     }
 }

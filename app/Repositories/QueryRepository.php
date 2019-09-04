@@ -5,6 +5,7 @@ namespace App\Repositories;
 
 use App\Model\Arsip;
 use App\Model\Berita;
+use App\Model\Setting;
 use Illuminate\Support\Facades\DB;
 
 class QueryRepository
@@ -73,6 +74,21 @@ class QueryRepository
             ->where('berita_url', $slug)
             ->with('user');
         return $data;
+    }
+
+    public static function setting()
+    {
+        return Setting::query();
+    }
+
+    public static function findSetting($name)
+    {
+        return self::setting()->where('name',$name);
+    }
+
+    public static function getArsipBySlug($slug)
+    {
+        return Arsip::where('arsip_slug', '=', $slug);
     }
 
 }
