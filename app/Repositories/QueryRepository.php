@@ -91,4 +91,9 @@ class QueryRepository
         return Arsip::where('arsip_slug', '=', $slug);
     }
 
+    public static function joinArsip()
+    {
+        return Arsip::join('category', 'category.cat_id', '=', 'arsip.cat_id');
+    }
+
 }
