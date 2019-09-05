@@ -21,20 +21,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 mb-3" v-for="value in lastData">
-                        <div class="card card-news mb-3">
-                            <img :src="value.gambar" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title font-weight-bold">{{value.judul}}</h5>
-                                <div class="card-text" v-html="value.short_content"></div>
-                                <p class="card-text">
-                                    <small class="text-muted">{{value.created_at}}</small>
-                                </p>
-                                <p>
-                                    <router-link :to="value.slug" class="btn btn-dark card-btn">Baca Selanjutnya
-                                    </router-link>
-                                </p>
-                            </div>
-                        </div>
+                        <card-news :value="value"></card-news>
                     </div>
                 </div>
             </div>
@@ -46,7 +33,11 @@
 </template>
 
 <script>
+    import CardNews from "../components/CardNews";
     export default {
+        components:{
+          CardNews
+        },
         data() {
             return {
                 title: 'Berita',
@@ -108,9 +99,5 @@
     .bg-gradient-primary {
         background: rgb(231, 69, 69);
         background: linear-gradient(180deg, rgba(231, 69, 69, 1) 0%, rgba(231, 69, 69, 1) 0%, rgba(255, 255, 255, 1) 100%);
-    }
-
-    .card-news {
-        height: 500px;
     }
 </style>

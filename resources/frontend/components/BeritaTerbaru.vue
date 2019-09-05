@@ -8,17 +8,7 @@
 
         <div class="row">
             <div class="col-md-4" v-for="value in lists.data">
-                <div class="card card-news mb-3">
-                    <img :src="value.gambar" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">{{value.judul}}</h5>
-                        <div class="card-text" v-html="value.short_content"></div>
-                        <p class="card-text"><small class="text-muted">{{value.created_at}}</small></p>
-                        <p>
-                            <router-link :to="value.slug" class="btn btn-dark card-btn">Baca Selanjutnya</router-link>
-                        </p>
-                    </div>
-                </div>
+                <card-news :value="value"></card-news>
             </div>
         </div>
     </div>
@@ -45,7 +35,11 @@
 </style>
 
 <script>
+    import CardNews from "../components/CardNews";
     export default {
+        components:{
+          CardNews
+        },
         data(){
             return{
                 lists:""
