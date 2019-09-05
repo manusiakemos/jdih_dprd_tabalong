@@ -197,6 +197,7 @@ class ArsipController extends Controller
 
     public function integrasi()
     {
+        ini_set('memory_limit', '-1');
         return IntegrasiResource::collection(Arsip::with('category')->get());
     }
 }

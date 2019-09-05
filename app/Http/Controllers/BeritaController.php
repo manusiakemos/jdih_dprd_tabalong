@@ -39,6 +39,9 @@ class BeritaController extends Controller
 
     public function store(Request $request)
     {
+        ini_set('post_max_size', '20M');
+        ini_set('upload_max_filesize', '16M');
+        ini_set('memory_limit', '-1');
         $this->validate($request,[
            'link' => Rule::unique('berita', 'berita_url')
         ]);
@@ -79,6 +82,9 @@ class BeritaController extends Controller
 
     public function update(Request $request, $id)
     {
+        ini_set('post_max_size', '20M');
+        ini_set('upload_max_filesize', '16M');
+        ini_set('memory_limit', '-1');
         $berita = Berita::find($id);
         $berita->berita_judul = $request->judul;
         $berita->cb_id = $request->kategori;

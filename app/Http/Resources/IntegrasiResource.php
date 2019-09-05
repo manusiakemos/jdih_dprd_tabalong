@@ -15,14 +15,14 @@ class IntegrasiResource extends JsonResource
     public function toArray($request)
     {
         return array (
-            'idData' => $this->arsip_id,
-            'tahun_pengundangan' => $this->arsip_tahun,
-            'tanggal_pengundangan' => $this->arsip_date,
-            'jenis' => $this->category->cat_name,
-            'noPeraturan' => $this->arsip_nomor,
-            'judul' => $this->arsip_title,
+            'idData' => "$this->arsip_id",
+            'tahun_pengundangan' => "$this->arsip_tahun",
+            'tanggal_pengundangan' => "$this->arsip_date",
+            'jenis' => "{$this->category->cat_name}",
+            'noPeraturan' =>" $this->arsip_nomor",
+            'judul' => "$this->arsip_title",
+            'fileDownload' => "$this->arsip_filename",
             'urlDownload' => route('arsip.download', $this->arsip_slug),
-            'fileDownload' => $this->arsip_filename,
             'operasi' => '4',
             'display' => '1',
         );
