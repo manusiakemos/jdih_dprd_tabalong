@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('admin', 'FrontendController@admin')->name('login');
+//Route::get('/{any}', 'FrontendController@home')->where('any', '.*');
 
-Route::get('/', 'FrontendController@home');
+Route::get('admin', 'FrontendController@admin')->name('login');
 
 /*Route::get('berita', 'FrontendController@berita');
 Route::get('berita/{slug}', 'FrontendController@beritaShow');

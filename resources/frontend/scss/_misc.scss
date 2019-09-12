@@ -19,12 +19,12 @@ body, html{
   -moz-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.30);
   box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.30);
   .card-news-body{
-    overflow-y: auto;
+    overflow-y: hidden !important;
   }
 }
 
 .card.card-news{
-  height: 540px;
+  height: 550px !important;
 }
 
 .bg-primary{

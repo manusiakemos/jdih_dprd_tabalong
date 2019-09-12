@@ -1,12 +1,13 @@
-.navbar{
+.navbar {
   min-height: 100px;
-  a.nav-link{
-    font-size: smaller;
-    font-family: 'PT Sans', sans-serif !important;
-  }
+}
 
-  .dropdown-item{
-    font-size: smaller;
-    font-family: 'PT Sans', sans-serif !important;
-  }
+.nav-link {
+  color: #000000 !important;
+  font-family: 'PT Sans', sans-serif !important;
+}
+
+.dropdown-item {
+  font-size: smaller;
+  font-family: 'PT Sans', sans-serif !important;
 }

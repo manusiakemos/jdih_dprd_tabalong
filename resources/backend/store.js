@@ -7,10 +7,11 @@ const vuexLocal = new VuexPersistence({
   storage: window.localStorage
 });
 
+
 const store = new Vuex.Store({
   state: {
     search: "",
-    app_name: localStorage.getItem("app_name"),
+    app_name: process.env.MIX_APP_NAME,
     auth: {
       loggedIn: false,
       token: null,
@@ -34,7 +35,7 @@ const store = new Vuex.Store({
 
   },
   actions: {},
-  plugins: [vuexLocal.plugin],
+  // plugins: [vuexLocal.plugin],
 });
 
 export default store;

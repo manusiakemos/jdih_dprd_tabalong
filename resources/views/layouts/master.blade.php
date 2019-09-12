@@ -21,10 +21,6 @@
     <router-view></router-view>
 </div>
 
-<!-- General JS Scripts -->
-<script>
-    localStorage.setItem("app_name", "{{ config("app.name") }}");
-</script>
 <script src="{{ (env('APP_ENV') === 'local') ? mix('js/frontend.js') : asset('js/frontend.js') }}"></script>
 
 {{--@stack("script")--}}
