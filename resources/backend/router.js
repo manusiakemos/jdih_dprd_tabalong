@@ -13,10 +13,14 @@ import Home from './views/Home';
 import Category from './views/Category';
 import Arsip from './views/Arsip';
 
-import Berita from './views/Berita';
 import NewsCategory from './views/NewsCategory';
+import Berita from './views/Berita';
 
 import Setting from  './views/Setting';
+
+import Halaman from  './views/Halaman';
+
+import Menu from  './views/Menu';
 
 import Login from './views/Login';
 
@@ -103,6 +107,20 @@ const router = new VueRouter({
         {
           path: '/setting',
           component: Setting,
+          meta: {
+            requiresAuth: true
+          }
+        },
+        {
+          path: '/halaman',
+          component: Halaman,
+          meta: {
+            requiresAuth: true
+          }
+        },
+        {
+          path: '/menu',
+          component: Menu,
           meta: {
             requiresAuth: true
           }

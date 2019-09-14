@@ -1,6 +1,6 @@
 <template>
   <div class="modal fade" tabindex="-1" role="dialog" :id="id">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog modal-xl" role="document">
       <div class="modal-content">
         <form action="#" method="post" v-on:submit.prevent="callback" novalidate>
           <div class="modal-header">

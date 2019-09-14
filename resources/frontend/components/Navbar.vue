@@ -10,17 +10,10 @@
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto text-dark text-uppercase">
-                <li class="nav-item">
-                    <router-link class="nav-link" to="/">Home <span class="sr-only"></span></router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" to="/produk-hukum">Produk Hukum</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" to="/berita">Berita</router-link>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="/admin">Login <span class="sr-only"></span></a>
+                <li class="nav-item" v-for="(link, index) in links">
+                    <router-link class="nav-link" :to="_halaman(link)">
+                        {{link.menu_name}} <span class="sr-only"></span>
+                    </router-link>
                 </li>
                 <!-- <li class="nav-item">
                      <router-link class="nav-link" to="galeri">Galeri</router-link>
@@ -44,22 +37,52 @@
     </nav>
 </template>
 
+<script>
+    export default {
+        data() {
+            return {
+                links: ''
+            }
+        },
+        created() {
+            this.$http.get('/api/web-menu').then(res => {
+                this.links = res.data;
+            })
+        },
+        methods: {
+            _halaman(data) {
+               var l = data.menu_link;
+               if(l == null){
+                   l = '/';
+               }
+                if (data.type == 'halaman') {
+                    return `/halaman/${l}`;
+                } else {
+                    return `/${l}`;
+                }
+            },
+        },
+    }
+</script>
+
 <style>
     .nav-link {
         font-size: 11pt !important;
         font-family: 'PT Sans', sans-serif !important;
         color: #000000 !important;
     }
-    .router-link-active{
+
+    .router-link-active {
         color: #000000 !important;
     }
-    .router-link-exact-active{
+
+    .router-link-exact-active {
         color: red !important;
     }
 
-    .navbar{
-        -webkit-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.75);
-        box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.75);
+    .navbar {
+        -webkit-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
     }
 </style>

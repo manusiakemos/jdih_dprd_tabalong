@@ -5,6 +5,8 @@ namespace App\Repositories;
 
 use App\Model\Arsip;
 use App\Model\Berita;
+use App\Model\Halaman;
+use App\Model\Menu;
 use App\Model\Setting;
 use Illuminate\Support\Facades\DB;
 
@@ -94,6 +96,16 @@ class QueryRepository
     public static function joinArsip()
     {
         return Arsip::join('category', 'category.cat_id', '=', 'arsip.cat_id');
+    }
+
+    public static function menu()
+    {
+        return Menu::where('parent_id', 0)->with('childrenRecursive');
+    }
+
+    public static function getHalamanBySlug($halaman)
+    {
+        return Halaman::where('hal_url', $halaman);
     }
 
 }

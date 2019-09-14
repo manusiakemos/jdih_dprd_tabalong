@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer bg-dark m-0 p-0">
+    <footer class="footer bg-black m-0 p-0">
         <div class="container">
             <h4 class="text-white text-uppercase pt-5 display-5">Kontak Kami</h4>
             <div class="m-t-40 text-white">
@@ -45,3 +45,12 @@
         }
     }
 </script>
+
+<style>
+    .bg-black{
+        background: #070707;
+    }
+    .footer a{
+        color: #FFFFFF;
+    }
+</style>

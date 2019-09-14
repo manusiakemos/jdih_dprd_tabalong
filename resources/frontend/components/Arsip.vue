@@ -5,19 +5,19 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="form-group row">
-                            <div class="col-md-3 mb-3">
+                            <div class="col-lg-3 mb-3">
                                 <label>Judul</label>
                                 <input type="text" class="form-control" v-model="formData.judul">
                             </div>
-                            <div class="col-md-3 mb-3">
+                            <div class="col-lg-3 mb-3">
                                 <label>Nomor</label>
                                 <input type="text" class="form-control" v-model="formData.nomor">
                             </div>
-                            <div class="col-md-3 mb-3">
+                            <div class="col-lg-3 mb-3">
                                 <label>Jenis</label>
                                 <select-jenis v-model="formData.jenis"></select-jenis>
                             </div>
-                            <div class="col-md-3 mb-3">
+                            <div class="col-lg-3 mb-3">
                                 <label>Tahun</label>
                                 <year-picker v-model="formData.tahun"></year-picker>
                             </div>

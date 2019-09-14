@@ -46,10 +46,38 @@
 					</router-link>
 				</li>
 
+				<li class="nav-item"  v-if="user.role == 'super-admin' || user.role == 'admin'">
+					<router-link to="/halaman" class="nav-link">
+						<i class="fas fa-route"></i>
+						<span>Halaman</span>
+					</router-link>
+				</li>
+
+				<li class="nav-item"  v-if="user.role == 'super-admin' || user.role == 'admin'">
+					<router-link to="/menu" class="nav-link">
+						<i class="fas fa-map-signs"></i>
+						<span>Menu</span>
+					</router-link>
+				</li>
+
+				<li class="menu-header">Lainnya</li>
+
 				<li class="nav-item" v-if="user.role == 'super-admin'">
 					<router-link to="/user" class="nav-link">
 						<i class="fas fa-users"></i>
 						<span>Manajemen User</span>
+					</router-link>
+				</li>
+				<li class="nav-item" v-if="user.role == 'super-admin'">
+					<router-link to="/setting" class="nav-link">
+						<i class="fas fa-user"></i>
+						<span>Setting</span>
+					</router-link>
+				</li>
+				<li class="nav-item">
+					<router-link to="/profile" class="nav-link">
+						<i class="fas fa-image"></i>
+						<span>Profile</span>
 					</router-link>
 				</li>
 			</ul>

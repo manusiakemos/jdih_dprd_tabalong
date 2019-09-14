@@ -4,6 +4,8 @@ Route::post('login', 'AuthController@login');
 //integrasi api
 Route::get('integrasi', 'ArsipController@integrasi');
 //berita terbaru terpopuler api
+Route::get('web-menu', 'ApiController@webMenu');
+Route::get('web-halaman/{halaman}', 'ApiController@webHalaman');
 Route::get('terbaru', 'ApiController@terbaru');
 Route::get('terpopuler', 'ApiController@terpopuler');
 Route::get('produk-hukum/download/{slug}', 'ApiController@download')->name('arsip.download');
@@ -27,21 +29,24 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::group(['middleware' => ['role:super-admin']], function () {
         Route::resource('/user', 'UserController')->except(['show', 'update']);
     });
-    Route::resource('arsip', 'ArsipController');
-
-    Route::resource('berita', 'BeritaController');
-
     Route::resource('category', 'CategoryController');
 
-    Route::resource('setting', 'SettingController');
+    Route::resource('arsip', 'ArsipController');
 
     Route::resource('category-berita', 'CategoryBeritaController');
 
+    Route::resource('berita', 'BeritaController');
+
+    Route::resource('halaman', 'HalamanController');
+
+    Route::resource('setting', 'SettingController');
+
+    Route::resource('menu', 'MenuController');
+    Route::post('menu-set-order', 'MenuController@setOrder');
 
     Route::get('profile', 'ProfileController@edit')->name('profile.edit');
     Route::put('profile', 'ProfileController@update')->name('profile.update');
     Route::post('profile', 'ProfileController@avatar')->name('profile.avatar');
-
 
     Route::post('home/filter', 'HomeController@filter');
 });

@@ -2,84 +2,62 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\HalamanResource;
 use App\Model\Halaman;
 use Illuminate\Http\Request;
 
 class HalamanController extends Controller
 {
+
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index()
     {
-        //
+        return HalamanResource::collection(Halaman::all());
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        $db = new Halaman;
+        $db->hal_url = $request->hal_url;
+        $db->hal_judul = $request->hal_judul;
+        $db->hal_isi = $request->hal_isi;
+        $db->hal_aktif = $request->hal_aktif;
+        $db->hal_custom = $request->hal_custom;
+        $db->save();
+        return responseJson('Halaman berhasil diupdate');
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Model\Halaman  $halaman
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param $id
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
      */
-    public function show(Halaman $halaman)
+    public function update(Request $request, $id)
     {
-        //
+        $db = Halaman::find($id);
+        $db->hal_url = $request->hal_url;
+        $db->hal_judul = $request->hal_judul;
+        $db->hal_isi = $request->hal_isi;
+        $db->hal_aktif = $request->hal_aktif;
+        $db->hal_custom = $request->hal_custom;
+        $db->save();
+        return responseJson('Halaman berhasil diupdate');
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Model\Halaman  $halaman
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Halaman $halaman)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Model\Halaman  $halaman
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Halaman $halaman)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Model\Halaman  $halaman
-     * @return \Illuminate\Http\Response
+     * @param Halaman $halaman
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
+     * @throws \Exception
      */
     public function destroy(Halaman $halaman)
     {
-        //
+        $halaman->delete();
+        return responseJson('Halaman Berhasil Dihapus');
     }
 }

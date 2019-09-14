@@ -7,6 +7,7 @@ import Home from './views/Home'
 import Berita from './views/Berita'
 import BeritaDetail from './views/BeritaDetail'
 import Arsip from './views/Arsip'
+import Halaman from './views/Halaman'
 
 Vue.use(VueRouter);
 
@@ -19,6 +20,11 @@ const router = new VueRouter({
             children:[
                 {
                     path: '/',
+                    name:'home',
+                    component: Home,
+                },
+                {
+                    path: '/home',
                     name:'home',
                     component: Home,
                 },
@@ -36,6 +42,11 @@ const router = new VueRouter({
                     path: '/berita/:slug',
                     name:'berita_detail',
                     component: BeritaDetail,
+                },
+                {
+                    path: '/halaman/:halaman',
+                    name:'halaman',
+                    component: Halaman,
                 }
             ]
         }

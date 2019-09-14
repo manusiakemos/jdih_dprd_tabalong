@@ -7,6 +7,7 @@ use App\Http\Resources\BeritaResource;
 use App\Http\Resources\SettingResource;
 use App\Repositories\QueryRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class ApiController extends Controller
 {
@@ -73,5 +74,21 @@ class ApiController extends Controller
             $fileName = $data->arsip_slug.".pdf";
             return response()->file($filePath,$headers,$fileName);
         }
+    }
+
+    public function webMenu()
+    {
+        $data = Cache::get('cache_menu', function () {
+            return QueryRepository::menu()->get();
+        });
+        return $data;
+    }
+
+    public function webHalaman($halaman)
+    {
+        $data = Cache::get('cache_menu', function () use ($halaman) {
+            return QueryRepository::getHalamanBySlug($halaman)->first();
+        });
+        return $data;
     }
 }

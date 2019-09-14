@@ -14,6 +14,13 @@ class HalamanResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'data' => parent::toArray($request),
+            'links' => [
+                'store' => route('halaman.store'),
+                'update' => route('halaman.update', $this->hal_id),
+                'destroy' => route('halaman.destroy', $this->hal_id),
+            ]
+        ];
     }
 }

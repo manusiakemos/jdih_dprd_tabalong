@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 mb-3" v-for="value in lastData">
+                    <div class="col-lg-4 col-md-6 mb-3" v-for="value in lastData">
                         <card-news :value="value"></card-news>
                     </div>
                 </div>
