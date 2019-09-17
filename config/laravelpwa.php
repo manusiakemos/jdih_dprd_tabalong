@@ -5,7 +5,7 @@ return [
     'manifest' => [
         'name' => env('APP_NAME', 'JDIH DPRD TABALONG'),
         'short_name' => 'JDIH DPRD',
-        'start_url' => '/admin',
+        'start_url' => '/',
         'background_color' => '#75BEE1',
         'theme_color' => '#75BEE1',
         'display' => 'standalone',
