@@ -24,7 +24,7 @@ class CreateArsipTable extends Migration {
 			$table->integer('arsip_hits')->nullable();
 			$table->text('arsip_desc', 65535)->nullable();
 			$table->date('arsip_date')->nullable();
-			$table->year('arsip_tahun');
+			$table->date('arsip_tahun');
 			$table->string('arsip_filename');
 			$table->boolean('arsip_tampil')->default(1);
 			$table->softDeletes();

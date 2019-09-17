@@ -12,15 +12,14 @@
             </div>
 
             <div class="section-body">
-                <!--<pre>{{lists}}</pre>-->
                 <div class="row mb-4">
                     <div class="col-lg-12 d-lg-flex">
                         <div class="mr-lg-auto">
-                             <button
-                                     class="btn btn-sm-block btn-dark mr-1 mt-2"
-                                     @click="create"
-                             >Tambah Menu
-                             </button>
+                            <button
+                                    class="btn btn-sm-block btn-dark mr-1 mt-2"
+                                    @click="create"
+                            >Tambah Menu
+                            </button>
                             <button type="button" class="btn btn-sm-block btn-dark mt-2 mr-1" @click="refresh">
                                 Refresh
                             </button>
@@ -28,23 +27,23 @@
                     </div>
                 </div>
                 <!-- draggable -->
-               <div class="card card-primary shadow-lg">
-                   <div class="card-body">
-                       <nested-draggable :lists="lists" />
-                   </div>
-                   <div class="card-footer">
-                       <button class="btn btn-block btn-info text-uppercase" @click="saveChanges">Simpan</button>
-                   </div>
-               </div>
+                <div class="card card-primary shadow-lg">
+                    <div class="card-body">
+                        <nested-draggable :children="lists"/>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-block btn-info text-uppercase" @click="saveChanges">Simpan</button>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- modal -->
         <modal
-            :title="titleForm"
-            :callback="action == 'store' ? store : update"
-            id="modal-menu"
-            ref="modal"
-            class="modal"
+                :title="titleForm"
+                :callback="action == 'store' ? store : update"
+                id="modal-menu"
+                ref="modal"
+                class="modal"
         >
             <div class="form-group">
                 <label>Nama</label>
@@ -93,40 +92,40 @@
             this.data2 = this.data;
             this.initActionDt();
         },
-       /* watch:{
-            'data.type' : {
-                handler(newValue) {
-                    this.data.menu_link = '';
-                },
-                deep:true
+        watch: {
+            lists() {
+                var x = this.lists.length + 1;
+                this.data.menu_id = x.toString();
             }
-        },*/
+        },
         data() {
             return {
                 action: "store",
                 title: "Menu",
                 titleForm: "Tambah Menu",
                 lists: [],
-                types:['dropdown','link','halaman'],
-                halaman:[],
+                types: ['dropdown', 'link', 'halaman'],
+                halaman: [],
                 data: {
-                    "menu_id": 1,
-                    "parent_id": "",
+                    "menu_id": "",
+                    "parent_id": "0",
                     "menu_link": "",
                     "menu_name": "",
-                    "type": "dropdown"
+                    "type": "dropdown",
+                    "children_recursive" : []
                 },
                 data2: null,
                 errors: [],
-                selectData: {}
+                selectData: {},
+                itemEdit: null
             };
         },
         methods: {
-            saveChanges(){
+            saveChanges() {
                 this.$http.post('/api/menu-set-order', {
-                    menu:this.lists
-                }).then(res=>{
-                    console.log(res.data);
+                    menu: this.lists
+                }).then(res => {
+                    this.$noty.info(res.data.message);
                 });
             },
             initActionDt() {
@@ -148,26 +147,25 @@
                 this.showModal("#modal-menu");
             },
             store() {
-                this.sendData({
-                    url: `/api/menu`,
-                    method: "post",
-                    data: this.data
-                });
+                this.lists.push(this.data);
+                this.saveChanges();
             },
-            edit(value) {
+            edit(value, index) {
                 this.action = "update";
                 this.data = _.cloneDeep(value);
+                this.itemEdit = value;
                 this.titleForm = "Edit Menu";
                 this.showModal("#modal-menu");
             },
             update() {
-                this.sendData({
-                    url: `/api/menu/${this.data.menu_id}`,
-                    method: "put",
-                    data: this.data
-                });
+                this.itemEdit.menu_name = this.data.menu_name;
+                this.itemEdit.menu_link = this.data.menu_link;
+                this.itemEdit.type = this.data.type;
+                this.itemEdit = null;
+                this.saveChanges();
             },
-            destroy(value) {
+            destroy(value, index) {
+                var v = value;
                 this.$swal({
                     title: "Apakah Kamu Yakin?",
                     type: "warning",
@@ -177,12 +175,10 @@
                     cancelButtonText: "Tidak"
                 }).then(result => {
                     if (result.value) {
-                        this.$http.delete(`/api/menu/${this.value.menu_id}`).then(res => {
-                            if (res.status) {
-                                this.$noty.warning(res.data.message);
-                                this.refresh();
-                            }
-                        });
+                        var i = _.findIndex(this.lists, v);
+                        // fruits.splice(2, 0, "Lemon", "Kiwi");
+                        this.lists.splice(i, 1)
+                        this.saveChanges();
                     }
                 });
             }

@@ -78,10 +78,7 @@ class ApiController extends Controller
 
     public function webMenu()
     {
-        $data = Cache::get('cache_menu', function () {
-            return QueryRepository::menu()->get();
-        });
-        return $data;
+        return QueryRepository::menu()->first();
     }
 
     public function webHalaman($halaman)

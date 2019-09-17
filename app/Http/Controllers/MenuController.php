@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\Menu;
+use App\Repositories\QueryRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
@@ -11,10 +12,8 @@ class MenuController extends Controller
 
     public function index()
     {
-       $data = Cache::get('cache_menu', function () {
-            return Menu::where('parent_id', 0)->with('childrenRecursive')->get();
-        });
-        return $data;
+        $menu = QueryRepository::menu()->first();
+        return $menu->value;
     }
 
     public function show(Menu $menu)
@@ -24,12 +23,8 @@ class MenuController extends Controller
 
     public function store(Request $request)
     {
-        Cache::flush();
-        $db = new Menu();
-        $db->parent_id = $request->parent_id != null ?  $request->parent_id  : 0;
-        $db->menu_link = $request->menu_link;
-        $db->menu_name = $request->menu_name;
-        $db->type = $request->type;
+        $db = QueryRepository::menu()->first();
+        $db->value = $request->menu;
         $db->save();
         return responseJson('Menu berhasil ditambahkan');    }
 
@@ -42,7 +37,6 @@ class MenuController extends Controller
      */
     public function update(Request $request, Menu $menu)
     {
-        Cache::flush();
         $db = $menu;
         $db->parent_id = $request->parent_id != null ?  $request->parent_id  : 0;
         $db->menu_link = $request->menu_link;
@@ -55,7 +49,6 @@ class MenuController extends Controller
 
     public function destroy(Menu $menu)
     {
-        Cache::flush();
         $menu->delete();
         return responseJson('Menu berhasil dihapus');
     }
@@ -74,17 +67,9 @@ class MenuController extends Controller
 
     public function setOrder(Request $request)
     {
-        Menu::truncate();
-        Cache::flush();
-        $id = 0;
-        foreach ($request->menu as $indexParent => $menu) {
-            $menu_id = $this->saveOrderRequest($request, $menu, $id);
-            $children = $menu['children_recursive'];
-            if ($children && count($children)) {
-                foreach ($children as $index => $child) {
-                    $this->saveOrderRequest($request, $child, $menu_id);
-                }
-            }
-        }
+        $db = QueryRepository::menu()->first();
+        $db->value = json_encode($request->menu);
+        $db->save();
+        return responseJson("Menu berhasil disimpan");
     }
 }

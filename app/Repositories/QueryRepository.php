@@ -100,7 +100,7 @@ class QueryRepository
 
     public static function menu()
     {
-        return Menu::where('parent_id', 0)->with('childrenRecursive');
+        return Setting::where('name', 'menu');
     }
 
     public static function getHalamanBySlug($halaman)

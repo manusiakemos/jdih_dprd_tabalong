@@ -1,15 +1,19 @@
 <template>
-    <draggable class="text-uppercase list-group dragArea" tag="ul"
-               :list="lists"
-               :group="{ name: 'g1' }">
-        <li v-for="el in lists" :key="el.menu_id" class="list-group-item">
-            <div class="d-flex d-inline-block mb-3 mt-3 p-3">
-                <strong>{{ el.menu_name }} || {{ el.menu_link }}  || {{ el.type }}</strong>
-                <button slot="header" class="btn btn-sm btn-dark ml-auto" @click="edit(el)">Edit</button>
-                <button slot="header" class="btn btn-sm btn-dark ml-3" @click="destroy(el)">Hapus</button>
+    <draggable class="text-uppercase card  m-3 pl-3 shadow-lg card-danger" tag="div"
+               :list="children"
+               :group="{ name: 'nested-draggable' }">
+        <div v-for="(el, index) in children" class="card-body"
+            :key="el.id">
+            <div class="d-flex d-inline-block p-3">
+                <strong>{{ el.menu_name }} || {{ el.menu_link }} || {{ el.type }}</strong>
+                <button slot="header" class="btn btn-sm btn-dark ml-auto" @click="edit(el, index)">Edit</button>
+                <button slot="header" class="btn btn-sm btn-dark ml-3" @click="destroy(el, index)">Hapus</button>
             </div>
-            <nested-draggable :lists="el.children_recursive"/>
-        </li>
+            <nested-draggable style="min-height: 120px;" v-if="el.children_recursive"
+                              :children="el.children_recursive"
+                              :parent="parent ? parent + '.' + index : parent + index"
+            />
+        </div>
     </draggable>
 </template>
 <script>
@@ -17,9 +21,13 @@
 
     export default {
         props: {
-            lists: {
+            children: {
                 required: true,
                 type: Array
+            },
+            parent: {
+                required: false,
+                default: '',
             }
         },
         components: {
@@ -27,20 +35,18 @@
         },
         name: "nested-draggable",
         methods: {
-            edit(el) {
-                this.$http.get(`/api/menu/${el.menu_id}`).then(res=>[
-                    this.$root.$children[0].$children[1].edit(el)
-                ]);
+            edit(el, index) {
+                this.$root.$children[0].$children[1].edit(el, index)
             },
-            destroy(el) {
-                this.$root.$children[0].$children[1].destroy(el)
+            destroy(el, index) {
+                this.$root.$children[0].$children[1].destroy(el, index)
             }
         }
     };
 </script>
 <style scoped>
     .dragArea {
-        min-height: 50px;
+        min-height: 150px;
         outline: 1px dashed;
     }
 </style>

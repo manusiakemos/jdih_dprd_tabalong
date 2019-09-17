@@ -10,23 +10,12 @@
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto text-dark text-uppercase">
-                <li class="nav-item" v-for="(link, index) in links">
+                <li class="nav-item" v-for="(link, index) in links" v-if="link.type != 'dropdown'">
                     <router-link class="nav-link" :to="_halaman(link)">
                         {{link.menu_name}} <span class="sr-only"></span>
                     </router-link>
                 </li>
-                <!-- <li class="nav-item">
-                     <router-link class="nav-link" to="galeri">Galeri</router-link>
-                 </li>
-                 <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-                         <a class="dropdown-item" href="#">Action</a>
-                         <a class="dropdown-item" href="#">Another action</a>
-                         <a class="dropdown-item" href="#">Something else here</a>
-                     </div>
-                 </li>-->
+                <navbar-item v-else :link="link"></navbar-item>
             </ul>
         </div>
 
@@ -38,7 +27,11 @@
 </template>
 
 <script>
+    import NavbarItem from "../components/NavbarItem";
     export default {
+        components:{
+            NavbarItem
+        },
         data() {
             return {
                 links: ''
@@ -46,15 +39,15 @@
         },
         created() {
             this.$http.get('/api/web-menu').then(res => {
-                this.links = res.data;
+                this.links = JSON.parse(res.data.value);
             })
         },
         methods: {
             _halaman(data) {
-               var l = data.menu_link;
-               if(l == null){
-                   l = '/';
-               }
+                var l = data.menu_link;
+                if (l == null) {
+                    l = '/';
+                }
                 if (data.type == 'halaman') {
                     return `/halaman/${l}`;
                 } else {
