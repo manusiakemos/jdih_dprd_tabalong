@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="icon" href="{{ asset('images/tabalong-square.png') }}">
     {{-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> --}}
-    @laravelPWA
+    {{--@laravelPWA--}}
 </head>
 
 <body class="layout-1">

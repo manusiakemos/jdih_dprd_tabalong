@@ -46,7 +46,7 @@
         >
             <div class="form-group">
                 <label>Judul</label>
-                <input type="text" class="form-control" v-model="data.judul"/>
+                <textarea v-model="data.judul" rows="3" class="form-control"></textarea>
                 <small class="text-danger" v-if="this.errors.judul">{{ this.errors.judul.join() }}</small>
             </div>
             <div class="form-group">
@@ -58,6 +58,11 @@
                 <label>Kategori</label>
                 <select-category v-model="data.kategori"></select-category>
                 <small class="text-danger" v-if="this.errors.kategori">{{ this.errors.kategori.join() }}</small>
+            </div>
+            <div class="form-group">
+                <label>Deskripsi</label>
+                <my-editor v-model="data.deskripsi"/>
+                <small class="text-danger" v-if="this.errors.deskripsi">{{ this.errors.deskripsi.join() }}</small>
             </div>
             <div class="form-group row">
                 <div class="col-md-6">
@@ -91,6 +96,12 @@
     </div>
 </template>
 
+<style scoped>
+    textarea {
+        height: 64px !important;
+    }
+</style>
+
 <script>
     import {ModelSelect} from "vue-search-select";
     import {mixin} from "../mixin";
@@ -123,11 +134,12 @@
                 configDt: {
                     url: "/api/arsip",
                     columns: [
-                        {title: "Judul", data: "arsip_title", class:"all"},
-                        {title: "Kategori", data: "category.cat_name"},
-                        {title: "Nomor", data: "arsip_nomor"},
-                        {title: "Tahun Penetapan", data: "arsip_tahun"},
+                        {title: "Judul", data: "arsip_title"},
+                        {title: "Kategori", data: "category.cat_name",class:"all"},
+                        {title: "Nomor", data: "arsip_nomor",class:"all"},
+                        {title: "Tahun Penetapan", data: "arsip_tahun",class:"all"},
                         {title: "Tanggal Penetapan", data: "arsip_date"},
+                        {title: "Deskripsi", data: "arsip_desc"},
                         {title: "Slug", data: "arsip_slug"},
                         {title: "Action", data: "action", class: "text-center all"}
                     ]

@@ -42,9 +42,9 @@ class ArsipController extends Controller
             $rules = [
                 'judul' => [
                     'required',
-                    Rule::unique('arsip', 'arsip_title')
-                        ->whereNull('deleted_at')
-                        ->ignore($id,"arsip_id")
+//                    Rule::unique('arsip', 'arsip_title')
+//                        ->whereNull('deleted_at')
+//                        ->ignore($id,"arsip_id")
                 ],
                 'slug' => [
                     'required',
@@ -98,6 +98,7 @@ class ArsipController extends Controller
         $db->cat_id = $request->kategori;
         $db->user_id = auth('api')->id();
         $db->arsip_slug = $request->slug;
+        $db->arsip_desc = $request->deskripsi;
         $db->arsip_title = $request->judul;
         $db->arsip_nomor = $request->nomor;
         $db->arsip_tahun = $request->tahun;
@@ -150,6 +151,7 @@ class ArsipController extends Controller
         $db->user_id = auth('api')->id();
         $db->arsip_slug = $request->slug;
         $db->arsip_title = $request->judul;
+        $db->arsip_desc = $request->deskripsi;
         $db->arsip_nomor = $request->nomor;
         $db->arsip_tahun = $request->tahun;
         $db->arsip_date = $request->tanggal;

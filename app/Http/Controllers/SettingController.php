@@ -10,7 +10,7 @@ class SettingController extends Controller
 {
     public function index()
     {
-        return SettingResource::collection(Setting::all());
+        return SettingResource::collection(Setting::where('name', '<>' , 'menu')->get());
     }
 
     public function show($id)

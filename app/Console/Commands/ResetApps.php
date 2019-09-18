@@ -42,8 +42,6 @@ class ResetApps extends Command
     public function handle()
     {
         User::truncate();
-        Arsip::truncate();
-        ArsipDetail::truncate();
         Artisan::call("db:seed");
     }
 }
