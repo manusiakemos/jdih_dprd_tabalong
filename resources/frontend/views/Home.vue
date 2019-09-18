@@ -62,8 +62,4 @@
         background: rgb(231,69,69);
         background: linear-gradient(180deg, rgba(231,69,69,1) 0%, rgba(231,69,69,1) 0%, rgba(255,255,255,1) 100%);
     }
-
-    .card-news{
-        height: 500px;
-    }
 </style>
