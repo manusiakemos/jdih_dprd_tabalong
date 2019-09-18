@@ -22,7 +22,7 @@
         position: relative;
         bottom: 20px;
         width: 100%;
-        height: 500px;
+        height: 400px;
     }
 
 </style>

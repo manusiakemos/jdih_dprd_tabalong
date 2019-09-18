@@ -15,15 +15,17 @@
 
            <arsip></arsip>
 
-            <div class="container-fluid">
+            <div class="container-fluid bg-whitesmoke">
                <arsip-terbaru></arsip-terbaru>
             </div> <!-- /container fluid -->
 
-            <div class="container-fluid bg-secondary">
+            <div class="container-fluid bg-whitesmoke">
                <arsip-terpopuler></arsip-terpopuler>
             </div> <!-- /container fluid -->
 
-            <div class="container-fluid bg-primary">
+            <waves-white></waves-white>
+
+            <div class="container-fluid bg-info">
               <berita-terbaru></berita-terbaru>
             </div>
 
@@ -33,6 +35,7 @@
 </template>
 
 <script>
+    import WavesWhite from "../components/WavesWhite/WavesWhite";
     import Arsip from "../components/Arsip"
     import ArsipTerbaru from "../components/ArsipTerbaru"
     import ArsipTerpopuler from "../components/ArsipTerpopuler"
@@ -40,7 +43,7 @@
 
     export default {
         components: {
-            Arsip, ArsipTerbaru, ArsipTerpopuler, BeritaTerbaru
+            Arsip, ArsipTerbaru, ArsipTerpopuler, BeritaTerbaru, WavesWhite
         }
     }
 </script>

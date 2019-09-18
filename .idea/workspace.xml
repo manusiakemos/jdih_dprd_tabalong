@@ -2,18 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef6cf33a-b3a7-48c3-88d1-6df8407dfdd1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/public/images/blob-shape.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/frontend/components/ArsipCard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/frontend/components/BlobBlue/BlobBlue.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/frontend/components/BlobBlue/_BlobBlue.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/frontend/components/BlobBlue/blob-shape.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/frontend/components/WavesRed/WavesRed.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/frontend/components/WavesRed/_WavesRed.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/frontend/components/WavesWhite/WavesWhite.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/frontend/components/WavesWhite/_WavesWhite.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/ResetApps.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/ResetApps.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArsipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArsipController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SettingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SettingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ArsipResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ArsipResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/frontend.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/frontend.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/frontend.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/frontend.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/backend/components/DataTables.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/backend/components/DataTables.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/backend/views/Arsip.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/backend/views/Arsip.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/stisla_vue.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/stisla_vue.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/frontend/components/Arsip.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/components/Arsip.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/frontend/components/ArsipTerbaru.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/components/ArsipTerbaru.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/frontend/components/ArsipTerpopuler.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/components/ArsipTerpopuler.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/frontend/components/BeritaTerbaru.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/components/BeritaTerbaru.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/frontend/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/components/Footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/frontend/layouts/Default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/layouts/Default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/frontend/scss/_misc.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/scss/_misc.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/frontend/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/frontend/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/frontend/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/views/Home.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,38 +38,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Arsip.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/backend/views/Arsip.vue">
+      <file leaf-file-name="Home.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/frontend/views/Home.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="99" column="12" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="12" />
+            <state relative-caret-position="146">
+              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArsipResource.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Resources/ArsipResource.php">
+      <file leaf-file-name="ArsipCard.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/frontend/components/ArsipCard.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="754">
-              <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+            <state relative-caret-position="145">
+              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataTables.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/backend/components/DataTables.vue">
+      <file leaf-file-name="WavesWhite.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/frontend/components/WavesWhite/WavesWhite.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
+            <state relative-caret-position="319">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArsipController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ArsipController.php">
+      <file leaf-file-name="Footer.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/frontend/components/Footer.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="156" column="38" selection-start-line="156" selection-end-line="157" />
+            <state relative-caret-position="513">
+              <caret line="21" column="81" selection-start-line="21" selection-start-column="81" selection-end-line="21" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Default.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/frontend/layouts/Default.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blob-shape.svg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/frontend/components/BlobBlue/blob-shape.svg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="BlobBlue.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/frontend/components/BlobBlue/BlobBlue.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="58">
+              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArsipTerpopuler.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/frontend/components/ArsipTerpopuler.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Arsip.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/frontend/components/Arsip.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="46" column="60" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WavesRed.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/frontend/components/WavesRed/WavesRed.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -74,9 +138,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Arsip</find>
-      <find>action</find>
-      <find>se</find>
       <find>Sel</find>
       <find>Category</find>
       <find>nama</find>
@@ -104,6 +165,9 @@
       <find>menu_id</find>
       <find>id</find>
       <find>configDt</find>
+      <find>#2b92e4</find>
+      <find>map</find>
+      <find>#map</find>
     </findStrings>
     <replaceStrings>
       <replace>ad_</replace>
@@ -137,6 +201,10 @@
       <replace>menu</replace>
       <replace>children</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/resources/frontend/components</dir>
+      <dir>$PROJECT_DIR$/</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -144,20 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/backend/components/MyChart.vue" />
-        <option value="$PROJECT_DIR$/app/Http/Resources/ChartDataResource.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-        <option value="$PROJECT_DIR$/resources/backend/views/Home.vue" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_09_04_154215_create_arsip_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/BeritaController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Resources/IntegrasiResource.php" />
-        <option value="$PROJECT_DIR$/resources/frontend/scss/_navbar.scss" />
-        <option value="$PROJECT_DIR$/resources/frontend/components/BeritaTerbaru.vue" />
-        <option value="$PROJECT_DIR$/resources/frontend/components/CardNews.vue" />
-        <option value="$PROJECT_DIR$/resources/frontend/scss/_misc.scss" />
-        <option value="$PROJECT_DIR$/app/Exceptions/Handler.php" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/resources/stubs/Component2.stub" />
         <option value="$PROJECT_DIR$/app/Console/Commands/CrudGenerator.php" />
         <option value="$PROJECT_DIR$/app/Http/Resources/HalamanResource.php" />
         <option value="$PROJECT_DIR$/app/Model/Halaman.php" />
@@ -169,16 +223,13 @@
         <option value="$PROJECT_DIR$/resources/backend/components/Sidebar.vue" />
         <option value="$PROJECT_DIR$/resources/backend/router.js" />
         <option value="$PROJECT_DIR$/app/Model/Menu.php" />
-        <option value="$PROJECT_DIR$/resources/frontend/components/Arsip.vue" />
         <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/resources/frontend/views/Halaman.vue" />
         <option value="$PROJECT_DIR$/resources/frontend/views/Berita.vue" />
-        <option value="$PROJECT_DIR$/resources/frontend/components/Footer.vue" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/frontend/router.js" />
         <option value="$PROJECT_DIR$/app/Repositories/QueryRepository.php" />
         <option value="$PROJECT_DIR$/resources/backend/components/jdih/TautanItem.vue" />
-        <option value="$PROJECT_DIR$/webpack.mix.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MenuController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" />
         <option value="$PROJECT_DIR$/resources/backend/views/Menu.vue" />
@@ -195,6 +246,23 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/ArsipController.php" />
         <option value="$PROJECT_DIR$/app/Http/Resources/ArsipResource.php" />
         <option value="$PROJECT_DIR$/resources/backend/views/Arsip.vue" />
+        <option value="$PROJECT_DIR$/webpack.mix.js" />
+        <option value="$PROJECT_DIR$/resources/frontend/scss/_misc.scss" />
+        <option value="$PROJECT_DIR$/resources/frontend/scss/_variables.scss" />
+        <option value="$PROJECT_DIR$/resources/frontend/store.js" />
+        <option value="$PROJECT_DIR$/resources/frontend/components/BeritaTerbaru.vue" />
+        <option value="$PROJECT_DIR$/resources/frontend/components/WavesRed/_WavesRed.scss" />
+        <option value="$PROJECT_DIR$/resources/frontend/views/Home.vue" />
+        <option value="$PROJECT_DIR$/resources/frontend/components/ArsipTerpopuler.vue" />
+        <option value="$PROJECT_DIR$/resources/frontend/components/ArsipTerbaru.vue" />
+        <option value="$PROJECT_DIR$/resources/frontend/components/BlobBlue/BlobBlue.vue" />
+        <option value="$PROJECT_DIR$/resources/frontend/components/BlobBlue/blob-shape.svg" />
+        <option value="$PROJECT_DIR$/resources/frontend/components/Arsip.vue" />
+        <option value="$PROJECT_DIR$/resources/frontend/components/WavesRed/WavesRed.vue" />
+        <option value="$PROJECT_DIR$/resources/frontend/layouts/Default.vue" />
+        <option value="$PROJECT_DIR$/resources/frontend/components/Footer.vue" />
+        <option value="$PROJECT_DIR$/resources/frontend/components/ArsipCard.vue" />
+        <option value="$PROJECT_DIR$/resources/frontend/components/WavesWhite/WavesWhite.vue" />
       </list>
     </option>
   </component>
@@ -344,50 +412,13 @@
             <path>
               <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
               <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Console" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Console" type="462c0819:PsiDirectoryNode" />
-              <item name="Commands" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
               <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
@@ -412,6 +443,71 @@
               <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="BlobBlue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="WavesRed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="WavesWhite" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jdih dprd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jdih dprd" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -447,15 +543,16 @@
     <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/frontend/components/BlobBlue" />
+      <recent name="$PROJECT_DIR$/resources/frontend/scss" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/public/app-images" />
       <recent name="$PROJECT_DIR$/resources/frontend/views" />
       <recent name="$PROJECT_DIR$/resources/backend/views" />
       <recent name="$PROJECT_DIR$/app/Http/Resources" />
-      <recent name="$PROJECT_DIR$/resources/views/action" />
-      <recent name="$PROJECT_DIR$/resources/frontend/components" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/frontend/scss" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -498,7 +595,7 @@
       <workItem from="1568266971977" duration="2851000" />
       <workItem from="1568274098112" duration="33755000" />
       <workItem from="1568615198060" duration="19850000" />
-      <workItem from="1568785093591" duration="1566000" />
+      <workItem from="1568785093591" duration="9101000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2">
       <created>1566958139556</created>
@@ -584,11 +681,18 @@
       <option name="project" value="LOCAL" />
       <updated>1568704848285</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="commit 13 deskripsi arsip">
+      <created>1568786915792</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1568786915792</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231791000" />
+    <option name="totallyTimeSpent" value="239326000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="817" extended-state="0" />
@@ -597,6 +701,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="File Transfer" order="8" weight="0.328125" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -605,6 +710,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31831187" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -615,8 +721,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="File Transfer" order="8" weight="0.328125" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Version Control" order="8" />
@@ -662,7 +766,8 @@
     <MESSAGE value="commit 10" />
     <MESSAGE value="commit 11" />
     <MESSAGE value="commit 12" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit 12" />
+    <MESSAGE value="commit 13 deskripsi arsip" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 13 deskripsi arsip" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -670,156 +775,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/frontend/components/ArsipTerbaru.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/frontend/components/CardNews.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="3" column="71" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/frontend/components/BeritaTerbaru.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/frontend/views/Home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Assert/Functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="1495" column="9" selection-start-line="1495" selection-start-column="9" selection-end-line="1495" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="46" column="7" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/node/globals.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="720" column="8" selection-start-line="720" selection-start-column="8" selection-end-line="720" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/league/flysystem/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-373" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="47" column="26" lean-forward="true" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/stubs/Component2.stub">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4814">
-          <caret line="166" selection-start-line="166" selection-end-line="166" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/stubs/Component.stub">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7381" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Halaman.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Arsip.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Resources/HalamanResource.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/backend/views/Setting.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="27" column="22" lean-forward="true" selection-end-line="166" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/backend/store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="38" column="3" lean-forward="true" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/backend/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/backend/components/Modal.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/backend/views/Halaman.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="39" column="64" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/CrudGenerator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1176">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/backend/components/Sidebar.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="57" column="50" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/backend/router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -831,13 +786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-324">
           <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/frontend/components/Arsip.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -859,13 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
           <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/frontend/components/Footer.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -901,13 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.mix.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -997,15 +931,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/backend/components/DataTables.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
+        <state relative-caret-position="-169">
           <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ArsipController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="156" column="38" selection-start-line="156" selection-end-line="157" />
         </state>
       </provider>
     </entry>
@@ -1018,8 +945,173 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/backend/views/Arsip.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
+        <state relative-caret-position="375">
           <caret line="99" column="12" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ArsipController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="156" column="38" selection-start-line="156" selection-end-line="157" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/views/Arsip.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/sass/lib/sass.jar!/org/jetbrains/plugins/sass/stdlib/sass_functions.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="1139" column="10" selection-start-line="1139" selection-start-column="10" selection-end-line="1139" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/scss/frontend.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/backend/scss/_functions.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/scss/_functions.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1033">
+          <caret line="66" column="13" lean-forward="true" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/backend/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/scss/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.mix.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/scss/_misc.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="74" column="21" lean-forward="true" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/components/BeritaTerbaru.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/components/WavesRed/_WavesRed.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/components/ArsipTerbaru.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/blob-shape.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/blob-shape.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/components/BlobBlue/blob-shape.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/components/ArsipTerpopuler.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/components/Arsip.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="46" column="60" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/components/WavesRed/WavesRed.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/components/BlobBlue/BlobBlue.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/layouts/Default.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/components/Footer.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="21" column="81" selection-start-line="21" selection-start-column="81" selection-end-line="21" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/views/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/components/ArsipCard.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/frontend/components/WavesWhite/WavesWhite.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>

@@ -2,12 +2,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="display-6 text-center text-white text-uppercase mt-5 mb-3">Berita Terbaru</h1>
+                <h2 class="display-6 text-center text-white text-uppercase mt-5 mb-3">Berita Terbaru</h2>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-4" v-for="value in lists.data">
+            <div class="col-md-4 pb-5" v-for="value in lists.data">
                 <card-news :value="value"></card-news>
             </div>
         </div>

@@ -10,7 +10,7 @@ const vuexLocal = new VuexPersistence({
 const store = new Vuex.Store({
   state: {
     search: "",
-    app_name: localStorage.getItem("app_name"),
+    app_name: process.env.MIX_APP_NAME,
     auth: {
       loggedIn: false,
       token: null,

@@ -1,7 +1,7 @@
 <template>
     <div id="produkHukumComponent">
         <div class="container-fluid bg-primary">
-            <div class="container pb-5 pt-2">
+            <div class="container pt-2">
                 <div class="card">
                     <div class="card-body">
                         <div class="form-group row">
@@ -24,16 +24,18 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-primary float-right" @click="fetchData">Cari Produk Hukum <span class="fas fa-search"></span></button>
+                        <button class="btn btn-primary float-right" @click="fetchData">Cari Produk Hukum <span
+                                class="fas fa-search"></span></button>
                     </div>
                 </div>
             </div>
         </div>
+        <waves-red></waves-red>
         <div class="container-fluid" v-show="produkHukum">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="display-6 text-center text-uppercase mt-5 mb-3">Hasil Pencarian Produk Hukum</h1>
+                        <h2 class="display-6 text-center text-uppercase mt-5 mb-3">Hasil Pencarian Produk Hukum</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -42,7 +44,9 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{value.label}}</h5>
                                 <p class="card-text">{{ value.judul }}</p>
-                                <a :href="value.url_download" target="_blank" class="btn btn-dark card-btn">Download PDF</a>
+                                <div v-html="value.deskripsi"></div>
+                                <a :href="value.url_download" target="_blank" class="btn btn-dark card-btn">Download
+                                    PDF</a>
                             </div>
                         </div>
                     </div>
@@ -56,18 +60,20 @@
 </template>
 
 <script>
+    import WavesRed from "./WavesRed/WavesRed";
     import YearPicker from "../../backend/components/YearPicker";
     import SelectJenis from "../components/SelectJenis";
+
     export default {
-        components:{
-            YearPicker,SelectJenis
+        components: {
+            YearPicker, SelectJenis, WavesRed
         },
         data() {
             return {
                 title: 'Produk Hukum',
                 produkHukum: '',
-                lastData:'',
-                errors:[],
+                lastData: '',
+                errors: [],
                 options: [],
                 formData: {
                     "judul": "",
@@ -78,28 +84,28 @@
             }
         },
         methods: {
-            created(){
+            created() {
                 this.fetchData()
             },
-            next(){
+            next() {
                 var l = this.produkHukum.links.next;
-                if(l){
+                if (l) {
                     this.$http.post(l, this.formData).then(res => {
                         this.produkHukum = res.data;
-                        res.data.data.forEach(v=>{
+                        res.data.data.forEach(v => {
                             this.lastData.push(v);
                         });
                     })
-                }else{
+                } else {
                     this.$noty.info('Data kosong');
                 }
             },
             fetchData() {
-                this.lastData='';
+                this.lastData = '';
                 this.$noty.info('Sedang mengambil data');
                 this.getData('api/web-arsip');
             },
-            getData(url){
+            getData(url) {
                 this.$http.post(url, this.formData).then(res => {
                     this.produkHukum = res.data;
                     this.lastData = res.data.data;
@@ -121,11 +127,11 @@
     }
 
     .bg-gradient-primary {
-        background: rgb(231,69,69);
-        background: linear-gradient(180deg, rgba(231,69,69,1) 0%, rgba(231,69,69,1) 0%, rgba(255,255,255,1) 100%);
+        background: rgb(231, 69, 69);
+        background: linear-gradient(180deg, rgba(231, 69, 69, 1) 0%, rgba(231, 69, 69, 1) 0%, rgba(255, 255, 255, 1) 100%);
     }
 
-    .card-news{
+    .card-news {
         height: 500px;
     }
 </style>

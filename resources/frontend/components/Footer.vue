@@ -1,21 +1,25 @@
 <template>
     <footer class="footer bg-black m-0 p-0">
-        <div class="container">
-            <h4 class="text-white text-uppercase pt-5 display-5">Kontak Kami</h4>
-            <div class="m-t-40 text-white">
-                <div class="row">
-                    <div class="col-md-6" v-html="kontak.data ? kontak.data.value : ''">
+        <div class="container  pt-5 pb-3">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div id="kontak-kami">
+                        <div class="text-white">
+                            <div>
+                                <h4 class="text-white text-uppercase pt-3 pb-3 display-5">Kontak Kami</h4>
+                                <div v-html="kontak.data ? kontak.data.value : ''"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="table-responsive pt-5 pb-3">
-                <div id='map'></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
+                <div class="col-lg-7">
+                    <div class="table-responsive">
+                        <div id='map' class="shadow-lg"></div>
+                    </div>
+                </div>
                 <div class="col-12">
-                    <h6 class="text-white text-center mb-3 pb-5 display-6" v-html="copyright.data ? copyright.data.value : ''"></h6>
+                    <h6 class="text-warning text-uppercase mb-3 pt-5 pb-2 display-6" id="copyright"
+                        v-html="copyright.data ? copyright.data.value : ''"></h6>
                 </div>
             </div>
         </div>
@@ -23,22 +27,23 @@
 </template>
 
 <script>
+    // import BlobBlue from "./BlobBlue/BlobBlue";
     export default {
-        created(){
-          this.getSetting()
+        created() {
+            this.getSetting()
         },
-        data(){
+        data() {
             return {
-                "copyright" : "",
-                "kontak" : ""
+                "copyright": "",
+                "kontak": ""
             }
         },
-        methods:{
+        methods: {
             getSetting() {
-                this.$http.get('/api/web-setting/kontak').then(res=>{
+                this.$http.get('/api/web-setting/kontak').then(res => {
                     this.kontak = res.data;
                 });
-                this.$http.get('/api/web-setting/copyright').then(res=>{
+                this.$http.get('/api/web-setting/copyright').then(res => {
                     this.copyright = res.data;
                 });
             },
@@ -46,11 +51,15 @@
     }
 </script>
 
-<style>
-    .bg-black{
-        background: #070707;
+<style scoped>
+    #copyright{
+        position: relative;
     }
-    .footer a{
+    .bg-black {
+        background: #10171c;
+    }
+
+    .footer a {
         color: #FFFFFF;
     }
 </style>
