@@ -2,6 +2,7 @@
 
 body, html{
   font-family: 'Nunito', sans-serif !important;
+  background: color(body) !important;
 }
 
 .display-1,
@@ -23,9 +24,9 @@ body, html{
   }
 }
 
-.card-img-top{
+/*.card-img-top{
   height: 230px !important;
-}
+}*/
 
  .card-news{
   height: 560px !important;
@@ -63,6 +64,9 @@ body, html{
   -moz-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.50);
   box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.50);
 }
+.text-info{
+  color: color(info) !important;
+}
 
 .bg-dark{
   background: color(dark) !important;
@@ -77,6 +81,9 @@ body, html{
 
 .bg-success{
   background: color(success) !important;
+}
+.text-success{
+  color: color(success) !important;
 }
 .btn-success{
   background: color(success) !important;
@@ -114,4 +121,9 @@ body, html{
 .form-control:focus {
   border-color: #4c9cef;
   border-width: 2px;
+}
+
+.my-border{
+  border-bottom: 2px solid !important;
+  border-color: color('info') !important;
 }

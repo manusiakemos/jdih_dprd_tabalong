@@ -6,27 +6,42 @@
             <div class="container-fluid bg-primary">
                 <div class="jumbotron bg-primary text-center text-white m-0">
                     <div class="container">
-                        <h1 class="display-4">{{$store.state.app_name}}</h1>
+                        <h1 class="display-4 d-sm-block">{{$store.state.app_name}}</h1>
                         <p>Selamat Datang di Website Jaringan Dokumentasi dan Informasi Hukum DPRD Kabupaten
                             Tabalong</p>
                     </div>
                 </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                           <div>
+                               <arsip></arsip>
+                           </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <waves-red fill="#634882"></waves-red>
+            <!--<end-jumbotron></end-jumbotron>-->
 
-           <arsip></arsip>
 
-            <div class="container-fluid bg-whitesmoke">
-               <arsip-terbaru></arsip-terbaru>
-            </div> <!-- /container fluid -->
+           <div class="container-fluid">
+               <div class="container">
+                   <div class="row">
+                       <div class="col-lg-8">
+                           <slider class="pb-3 pt-5"></slider>
+                           <berita-terbaru></berita-terbaru>
+                       </div>
+                       <div class="col-lg-4">
+                           <widget-left></widget-left>
+                       </div>
+                   </div>
+               </div>
+           </div>
+            <waves-white fill="#ffe6a9"></waves-white>
 
-            <div class="container-fluid bg-whitesmoke">
-               <arsip-terpopuler></arsip-terpopuler>
-            </div> <!-- /container fluid -->
+            <div class="container-fluid bg-success">
 
-            <waves-white></waves-white>
-
-            <div class="container-fluid bg-info">
-              <berita-terbaru></berita-terbaru>
             </div>
 
 
@@ -34,32 +49,24 @@
     </div>
 </template>
 
+<style>
+    .bg-gradient-primary{
+        background: rgb(108,35,96);
+        background: linear-gradient(180deg, rgba(108,35,96,1) 13%, rgba(16,23,28,1) 100%);
+    }
+</style>
+
 <script>
+    import Slider from "../components/Slider";
     import WavesWhite from "../components/WavesWhite/WavesWhite";
+    import WavesRed from "../components/WavesRed/WavesRed";
+    import WidgetLeft from "../components/WidgetLeft"
     import Arsip from "../components/Arsip"
-    import ArsipTerbaru from "../components/ArsipTerbaru"
-    import ArsipTerpopuler from "../components/ArsipTerpopuler"
     import BeritaTerbaru from "../components/BeritaTerbaru"
 
     export default {
         components: {
-            Arsip, ArsipTerbaru, ArsipTerpopuler, BeritaTerbaru, WavesWhite
+            Arsip,BeritaTerbaru, WavesWhite, Slider, WavesRed, WidgetLeft
         }
     }
 </script>
-
-<style scoped>
-    .card.bg-info, .card.bg-primary {
-        height: 200px;
-    }
-
-    .card-btn {
-        position: absolute;
-        bottom: 15px;
-    }
-
-    .bg-gradient-primary {
-        background: rgb(231,69,69);
-        background: linear-gradient(180deg, rgba(231,69,69,1) 0%, rgba(231,69,69,1) 0%, rgba(255,255,255,1) 100%);
-    }
-</style>

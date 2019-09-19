@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div id="kontak-kami">
-                        <div class="text-white">
+                        <div class="text-white text-center text-lg-left">
                             <div>
                                 <h4 class="text-white text-uppercase pt-3 pb-3 display-5">Kontak Kami</h4>
                                 <div v-html="kontak.data ? kontak.data.value : ''"></div>
@@ -14,11 +14,11 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="table-responsive">
-                        <div id='map' class="shadow-lg"></div>
+                       <!-- <div id='map' class="shadow-lg"></div>-->
                     </div>
                 </div>
                 <div class="col-12">
-                    <h6 class="text-warning text-uppercase mb-3 pt-5 pb-2 display-6" id="copyright"
+                    <h6 class="text-warning text-center text-lg-left text-uppercase mb-3 pt-5 pb-2 display-6" id="copyright"
                         v-html="copyright.data ? copyright.data.value : ''"></h6>
                 </div>
             </div>
@@ -56,7 +56,8 @@
         position: relative;
     }
     .bg-black {
-        background: #10171c;
+        /*background: #0B032D;*/
+        background: #000000 ;
     }
 
     .footer a {

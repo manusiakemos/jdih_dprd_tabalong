@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-md navbar-light bg-whitesmoke">
+    <nav class="navbar navbar-expand-md navbar-light">
         <a class="navbar-brand text-dark text-uppercase" href="#">
             <img loading="lazy" src="images/jdih.png" width="60" height="60" class="d-inline-block align-middle" alt="">
         </a>
@@ -16,6 +16,9 @@
                     </router-link>
                 </li>
                 <navbar-item v-else :link="link"></navbar-item>
+                <li class="nav-item">
+                    <a href="/admin-panel" class="nav-link">LOGIN ADMIN</a>
+                </li>
             </ul>
         </div>
 
@@ -62,15 +65,15 @@
     .nav-link {
         font-size: 11pt !important;
         font-family: 'PT Sans', sans-serif !important;
-        color: #000000 !important;
-    }
-
-    .router-link-active {
-        color: #000000 !important;
+        color: black !important;
     }
 
     .router-link-exact-active {
-        color: red !important;
+        color: #66487f !important;
+    }
+
+    .router-link{
+        color: black;
     }
 
     .navbar {

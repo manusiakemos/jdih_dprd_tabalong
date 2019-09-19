@@ -1,6 +1,6 @@
 <template>
     <div id="beritaComponent">
-        <div class="container-fluid bg-white">
+        <div class="container-fluid">
             <div class="container pb-0 pt-5">
                 <div class="d-flex d-inline-block">
                     <input type="search" class="form-control mr-3" v-model="formData.search"
@@ -12,21 +12,26 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid bg-white">
+        <div class="container-fluid">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <h1 class="display-6 text-center text-uppercase mt-5 mb-3">Berita</h1>
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="display-6 text-center text-uppercase mt-5 mb-3">Berita</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 mb-3" v-for="value in lastData">
+                                <card-news :value="value"></card-news>
+                            </div>
+                            <button class="btn btn-info ml-3 mb-5" @click="next">Muat Lebih Banyak</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <widget-left></widget-left>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 mb-3" v-for="value in lastData">
-                        <card-news :value="value"></card-news>
-                    </div>
-                </div>
-            </div>
-            <div class="container pb-5 pt-2">
-                <button class="btn btn-block btn-info" @click="next">Selanjutnya</button>
             </div>
         </div> <!-- /container fluid -->
     </div>
@@ -34,9 +39,11 @@
 
 <script>
     import CardNews from "../components/CardNews";
+    import WidgetLeft from "../components/WidgetLeft";
+
     export default {
         components:{
-          CardNews
+          CardNews,WidgetLeft
         },
         data() {
             return {
@@ -85,19 +92,3 @@
         }
     }
 </script>
-
-<style scoped>
-    .card.bg-info, .card.bg-primary {
-        height: 200px;
-    }
-
-    .card-btn {
-        position: absolute;
-        bottom: 15px;
-    }
-
-    .bg-gradient-primary {
-        background: rgb(231, 69, 69);
-        background: linear-gradient(180deg, rgba(231, 69, 69, 1) 0%, rgba(231, 69, 69, 1) 0%, rgba(255, 255, 255, 1) 100%);
-    }
-</style>

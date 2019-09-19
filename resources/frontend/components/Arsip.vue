@@ -1,72 +1,63 @@
 <template>
     <div id="produkHukumComponent">
-        <div class="container-fluid bg-primary">
-            <div class="container pt-2">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="form-group row">
-                            <div class="col-lg-3 mb-3">
-                                <label>Judul</label>
-                                <input type="text" class="form-control" v-model="formData.judul">
-                            </div>
-                            <div class="col-lg-3 mb-3">
-                                <label>Nomor</label>
-                                <input type="text" class="form-control" v-model="formData.nomor">
-                            </div>
-                            <div class="col-lg-3 mb-3">
-                                <label>Jenis</label>
-                                <select-jenis v-model="formData.jenis"></select-jenis>
-                            </div>
-                            <div class="col-lg-3 mb-3">
-                                <label>Tahun</label>
-                                <year-picker v-model="formData.tahun"></year-picker>
-                            </div>
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group row">
+                        <div class="col-lg-3 mb-3">
+                            <label>Judul</label>
+                            <input type="text" class="form-control" v-model="formData.judul">
+                        </div>
+                        <div class="col-lg-3 mb-3">
+                            <label>Nomor</label>
+                            <input type="text" class="form-control" v-model="formData.nomor">
+                        </div>
+                        <div class="col-lg-3 mb-3">
+                            <label>Jenis</label>
+                            <select-jenis v-model="formData.jenis"></select-jenis>
+                        </div>
+                        <div class="col-lg-3 mb-3">
+                            <label>Tahun</label>
+                            <year-picker v-model="formData.tahun"></year-picker>
                         </div>
                     </div>
-                    <div class="card-footer">
-                        <button class="btn btn-primary float-right" @click="fetchData">Cari Produk Hukum <span
-                                class="fas fa-search"></span></button>
-                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary float-right" @click="fetchData">Cari Produk Hukum <span
+                            class="fas fa-search"></span></button>
                 </div>
             </div>
-        </div>
-        <waves-red></waves-red>
-        <div class="container-fluid" v-show="produkHukum">
-            <div class="container">
-                <div class="row">
+            <div class="hasil" v-show="produkHukum">
+               <!-- <div class="row">
                     <div class="col-12">
-                        <h2 class="display-6 text-center text-uppercase mt-5 mb-3">Hasil Pencarian Produk Hukum</h2>
+                        <h2 class="display-6 text-white text-center text-uppercase mt-5 mb-3">
+                            Hasil Pencarian Produk Hukum</h2>
                     </div>
-                </div>
+                </div>-->
                 <div class="row">
                     <div class="col-md-12 mb-3 mt-3" v-for="value in lastData">
-                        <div class="card bg-primary text-white">
-                            <div class="card-body">
-                                <h5 class="card-title">{{value.label}}</h5>
-                                <p class="card-text">{{ value.judul }}</p>
-                                <div v-html="value.deskripsi"></div>
-                                <a :href="value.url_download" target="_blank" class="btn btn-dark card-btn">Download
-                                    PDF</a>
-                            </div>
-                        </div>
+                        <arsip-card :value="value"></arsip-card>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <button class="btn btn-block mt-3 mb-3 btn-info" @click="next">Selanjutnya</button>
-            </div>
-        </div> <!-- /container fluid -->
+               <div class="row">
+                   <div class="col-12">
+                       <button class="btn btn-block btn-secondary mt-3 text-white" @click="next">Selanjutnya</button>
+                   </div>
+               </div>
+            </div> <!-- /container fluid -->
+        </div>
     </div>
 </template>
 
 <script>
-    import WavesRed from "./WavesRed/WavesRed";
     import YearPicker from "../../backend/components/YearPicker";
     import SelectJenis from "../components/SelectJenis";
+    import ArsipCard from "./ArsipCard";
 
     export default {
         components: {
-            YearPicker, SelectJenis, WavesRed
+            ArsipCard,
+            YearPicker, SelectJenis
         },
         data() {
             return {
@@ -117,15 +108,6 @@
 </script>
 
 <style scoped>
-    .card.bg-info, .card.bg-primary {
-        height: 200px;
-    }
-
-    .card-btn {
-        position: absolute;
-        bottom: 15px;
-    }
-
     .bg-gradient-primary {
         background: rgb(231, 69, 69);
         background: linear-gradient(180deg, rgba(231, 69, 69, 1) 0%, rgba(231, 69, 69, 1) 0%, rgba(255, 255, 255, 1) 100%);

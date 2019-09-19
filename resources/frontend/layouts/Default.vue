@@ -42,10 +42,10 @@
             };
         },
         mounted() {
-           this.setMap();
+           // this.setMap();
         },
         methods:{
-            setMap(){
+           /* setMap(){
                 mapboxgl.accessToken = 'pk.eyJ1IjoibWFudXNpYWtlbW9zIiwiYSI6ImNqdzR2cHA5eDEyM3I0NnBjYXhmN3l0dWMifQ.gacuqFp1YJ_IkEERRO9Q7A';
                 var map = new mapboxgl.Map({
                     container: 'map',
@@ -57,7 +57,7 @@
                 new mapboxgl.Marker()
                     .setLngLat(['115.41892449494185','-2.176045279407404'])
                     .addTo(map);
-            }
+            }*/
         }
     };
 </script>

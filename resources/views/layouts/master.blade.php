@@ -8,8 +8,8 @@
     <title>{{ config('app.name') }}</title>
     <link rel="stylesheet" href="{{ asset('css/frontend.css') }}">
     <link rel="icon" href="{{ asset('images/tabalong-square.png') }}">
-    <script src='https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css' rel='stylesheet' />
+  {{--  <script src='https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css' rel='stylesheet' />--}}
     {{--@laravelPWA--}}
 <body>
 {{--@include('components.navbar')--}}
