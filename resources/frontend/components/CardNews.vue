@@ -1,26 +1,23 @@
 <template>
-    <div class="card bg-info text-white mb-3">
-        <!--<img :src="value.gambar" class="card-img-top">-->
-        <div class="card-body">
-            <div class="row">
-                <div class="col-lg-4">
-                    <img :src="value.gambar" class="img-fluid">
-                </div>
-                <div class="col-lg-8">
-                    <h5 class="card-title">{{value.judul.substr(0,100)}}</h5>
-                    <div class="card-text" v-html="value.short_content"></div>
-                </div>
-                <div class="col-lg-12">
-                    <p class="card-text">
-                        <small class="text-white">{{value.created_at}}</small>
-                    </p>
+    <router-link :to="value.slug">
+        <div class="card mb-2">
+            <!--<img :src="value.gambar" class="card-img-top">-->
+            <div class="card-body text-dark">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img :src="value.gambar" class="img-fluid" width="100%">
+                    </div>
+                    <div class="col-lg-9">
+                        <h6 class="card-title text-uppercase display-5">{{value.judul.substr(0,100)}}</h6>
+                        <strong>
+                            <small class="text-info">{{value.created_at}}</small>
+                        </strong>
+                        <div class="card-text" v-html="value.short_content"></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="card-footer d-flex">
-            <router-link :to="value.slug" class="btn btn-dark ml-auto">Selengkapnya</router-link>
-        </div>
-    </div>
+    </router-link>
 </template>
 
 <script>

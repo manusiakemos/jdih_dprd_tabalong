@@ -5,21 +5,35 @@ namespace App\Http\Controllers;
 use App\Http\Resources\ArsipResource;
 use App\Http\Resources\BeritaResource;
 use App\Http\Resources\SettingResource;
+use App\Model\Galeri;
+use App\Model\Slider;
 use App\Repositories\QueryRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
 class ApiController extends Controller
 {
+    public function slider()
+    {
+        $data = Slider::all();
+        return $data;
+    }
+
+    public function gallery()
+    {
+        $data = Galeri::latest()->paginate(16);
+        return $data;
+    }
+
     public function terbaru()
     {
-        $data = QueryRepository::terbaru(6)->get();
+        $data = QueryRepository::terbaru(5)->get();
         return ArsipResource::collection($data);
     }
 
     public function terpopuler()
     {
-        $data = QueryRepository::terpopuler(6)->get();
+        $data = QueryRepository::terpopuler(5)->get();
         return ArsipResource::collection($data);
     }
 
@@ -39,6 +53,12 @@ class ApiController extends Controller
     public function beritaTerbaru()
     {
         $data = QueryRepository::beritaTerbaru()->paginate(6);
+        return BeritaResource::collection($data);
+    }
+
+    public function beritaTerpopuler()
+    {
+        $data = QueryRepository::beritaPopuler()->paginate(6);
         return BeritaResource::collection($data);
     }
 

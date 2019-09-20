@@ -1,5 +1,5 @@
 <template>
-	<table class="table table-striped dt-responsive nowrap" :id="selector">
+	<table class="table table-striped dt-responsive" :id="selector">
 		<thead>
 			<tr>
 				<th v-for="(v, i) in configDt.columns" :key="i">{{ v.title }}</th>

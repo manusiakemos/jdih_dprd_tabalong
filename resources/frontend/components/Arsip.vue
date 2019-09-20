@@ -27,21 +27,21 @@
                             class="fas fa-search"></span></button>
                 </div>
             </div>
-            <div class="hasil" v-show="produkHukum">
-               <!-- <div class="row">
-                    <div class="col-12">
-                        <h2 class="display-6 text-white text-center text-uppercase mt-5 mb-3">
-                            Hasil Pencarian Produk Hukum</h2>
-                    </div>
-                </div>-->
+            <div class="hasil pt-3" v-show="produkHukum">
                 <div class="row">
-                    <div class="col-md-12 mb-3 mt-3" v-for="value in lastData">
-                        <arsip-card :value="value"></arsip-card>
+                    <div class="col-12">
+                        <h5 class="display-6 text-white text-center text-uppercase mt-5 mb-3">
+                            Hasil Pencarian Produk Hukum</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-1" v-for="value in lastData">
+                        <arsip-card variant="light" :value="value"></arsip-card>
                     </div>
                 </div>
                <div class="row">
                    <div class="col-12">
-                       <button class="btn btn-block btn-secondary mt-3 text-white" @click="next">Selanjutnya</button>
+                       <button class="btn btn-block btn-dark mt-3 text-white" @click="next">Selanjutnya</button>
                    </div>
                </div>
             </div> <!-- /container fluid -->

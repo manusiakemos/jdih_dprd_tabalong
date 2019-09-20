@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="display-4 mb-5 mt-5 text-uppercase">{{this.$route.params.halaman}}</h1>
+                        <h1 class="display-4 mb-2 mt-5 text-uppercase">{{this.$route.params.halaman}}</h1>
                     </div>
                 </div>
             </div>

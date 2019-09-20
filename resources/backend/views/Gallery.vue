@@ -7,7 +7,7 @@
                     <div class="breadcrumb-item active">
                         <router-link to="home">{{title}}</router-link>
                     </div>
-                    <div class="breadcrumb-item">Setting</div>
+                    <div class="breadcrumb-item">Gallery</div>
                 </div>
             </div>
 
@@ -15,11 +15,11 @@
                 <div class="row mb-4">
                     <div class="col-lg-12 d-lg-flex">
                         <div class="mr-lg-auto">
-                            <button
-                                    class="btn btn-sm-block btn-dark mr-1 mt-2"
-                                    @click="create"
-                            >Tambah Setting
-                            </button>
+                             <button
+                                     class="btn btn-sm-block btn-dark mr-1 mt-2"
+                                     @click="create"
+                             >Tambah Gallery
+                             </button>
                             <button type="button" class="btn btn-sm-block btn-dark mt-2 mr-1" @click="refresh">
                                 Refresh
                             </button>
@@ -27,16 +27,25 @@
                     </div>
                 </div>
                 <!-- datatables -->
-                <div class="card card-primary" v-for="value in lists">
-                    <div class="card-header">
-                        <h4 class="text-uppercase"> {{value.data.name}}</h4>
-                        <div class="card-header-action">
-                            <button class="btn btn-dark" @click="edit(value)">Edit</button>
-                            <!--<button class="btn btn-dark" @click="destroy(value)">Destroy</button>-->
+                <div class="card-columns">
+                    <div v-for="value in lists.data" class="card card-primary">
+                        <div class="card-header">
+                            <h4 class="text-uppercase"> {{value.data.gal_title}}</h4>
+                            <div class="card-header-action">
+                                <button class="btn btn-dark" @click="edit(value)">Edit</button>
+                                <button class="btn btn-dark" @click="destroy(value)">Destroy</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-body">
-                       <div v-html="value.data.value"></div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <img :src="value.data.gal_filename" class="img-fluid w-100"/>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div v-html="value.data.gal_caption"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- end-datatables -->
@@ -44,22 +53,29 @@
         </section>
         <!-- modal -->
         <modal
-                :title="titleForm"
-                :callback="action == 'store' ? store : update"
-                id="modal-setting"
-                ref="modal"
-                class="modal"
+            :title="titleForm"
+            :callback="action == 'store' ? store : update"
+            id="modal-gallery"
+            ref="modal"
+            class="modal"
         >
             <div class="form-group">
-                <label>Nama</label>
-                <input type="text" class="form-control" v-model="data.data.name"/>
-                <small class="text-danger" v-if="this.errors.name">{{ this.errors.name.join() }}</small>
+                <label>Title</label>
+                <input type="text" class="form-control" v-model="data.data.gal_title"/>
+                <small class="text-danger" v-if="this.errors.gal_title">{{ this.errors.gal_title.join() }}</small>
             </div>
             <div class="form-group">
-                <label>Value</label>
-                <my-editor v-model="data.data.value"></my-editor>
-                <small class="text-danger" v-if="this.errors.value">{{ this.errors.value.join() }}</small>
+                <label>Caption</label>
+                <my-editor v-model="data.data.gal_caption"/>
+                <small class="text-danger" v-if="this.errors.gal_caption">{{ this.errors.gal_caption.join() }}</small>
             </div>
+
+            <div class="form-group">
+                <label>Upload Foto</label>
+                <file-upload v-model="data.data.gal_filename"/>
+                <small class="text-danger" v-if="this.errors.gal_filename">{{ this.errors.gal_filename.join() }}</small>
+            </div>
+
         </modal>
     </div>
 </template>
@@ -68,12 +84,14 @@
     import {mixin} from "../mixin";
     import Modal from "../components/Modal";
     import MyEditor from "../components/MyEditor";
+    import FileUpload from "../components/FileUpload";
 
     export default {
         mixins: [mixin],
         components: {
             Modal,
             MyEditor,
+            FileUpload
         },
         created() {
             this.data2 = this.data;
@@ -81,21 +99,23 @@
         data() {
             return {
                 action: "store",
-                title: "Setting",
-                titleForm: "Tambah Setting",
+                title: "Gallery",
+                titleForm: "Tambah Gallery",
                 lists: '',
                 data: {
                     "data": {
-                        "id": "",
-                        "name": "",
-                        "value": "",
-                        "created_at": null,
-                        "updated": null
+                        "gal_id": "",
+                        "gal_title": "",
+                        "gal_filename": "",
+                        "gal_caption": "",
+                        "gal_slug": "",
+                        "created_at": "",
+                        "updated_at": ""
                     },
                     "links": {
-                        "store": "/api/setting",
-                        "update": "/api/setting/1",
-                        "destroy": "/api/setting/1"
+                        "store": "/api/gallery",
+                        "update": "/api/gallery/1",
+                        "destroy": "/api/gallery/1"
                     }
                 },
                 data2: null,
@@ -108,7 +128,7 @@
         },
         methods: {
             initActionDt() {
-                this.$http.get('/api/setting').then(res => {
+                this.$http.get('/api/gallery').then(res => {
                     this.lists = res.data;
                 })
             },
@@ -119,8 +139,8 @@
             create() {
                 this.data = _.cloneDeep(this.data2);
                 this.action = "store";
-                this.titleForm = "Tambah Setting";
-                this.showModal("#modal-setting");
+                this.titleForm = "Tambah Gallery";
+                this.showModal("#modal-gallery");
             },
             store() {
                 this.sendData({
@@ -132,8 +152,8 @@
             edit(value) {
                 this.action = "update";
                 this.data = _.cloneDeep(value);
-                this.titleForm = "Edit Setting";
-                this.showModal("#modal-setting");
+                this.titleForm = "Edit Gallery";
+                this.showModal("#modal-gallery");
             },
             update() {
                 this.sendData({

@@ -33,7 +33,7 @@
                     return this.value;
                 },
                 set(value) {
-                    this.$emit("input", value);
+                    this.$emit("input", value.dataUrl);
                 }
             }
         },
@@ -41,7 +41,7 @@
             return {
                 msg: "",
                 hasImage: false,
-                preview: false,
+                preview: true,
             };
         },
         methods: {

@@ -2,8 +2,8 @@
     <div class="container pb-5">
         <div class="row">
             <div class="col-12">
-                <h5 class="display-6 text-uppercase mt-5 mb-3">
-                     <span class="my-border text-dark">
+                <h5 class="display-6 text-uppercase mt-5 mb-3 my-border">
+                     <span class="text-dark">
                         Produk Hukum Terpopuler
                     </span>
                 </h5>

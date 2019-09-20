@@ -14,9 +14,14 @@ Route::get('web-setting', 'ApiController@setting');
 Route::get('web-setting/{name}', 'ApiController@findSetting');
 //web arsip api
 Route::post('web-arsip', 'ApiController@arsip');
+//web gallery
+Route::get('web-gallery', 'ApiController@gallery');
+//web slider
+Route::get('web-slider', 'ApiController@slider');
 //web berita api
 Route::post('web-berita', 'ApiController@berita');
 Route::get('web-berita/terbaru', 'ApiController@beritaTerbaru');
+Route::get('web-berita/terpopuler', 'ApiController@beritaTerpopuler');
 Route::get('web-berita/detail/{slug}', 'ApiController@beritaDetail');
 //select data api
 Route::get('category/list', 'CategoryController@list')->name('category.list');
@@ -39,7 +44,11 @@ Route::group(['middleware' => ['auth:api']], function () {
 
     Route::resource('halaman', 'HalamanController');
 
+    Route::resource('gallery', 'GalleryController');
+
     Route::resource('setting', 'SettingController');
+
+    Route::resource('slider', 'SliderController');
 
     Route::resource('menu', 'MenuController');
     Route::post('menu-set-order', 'MenuController@setOrder');

@@ -1,10 +1,10 @@
 <template>
    <div id="arsip-view">
-       <section id="produk-hukum-section">
+       <section id="produk-hukum-section" class="bg-primary">
            <div class="container pt-5">
                <div class="row">
                    <div class="col-12">
-                       <h2 class="display-6 text-center">PENCARIAN PRODUK HUKUM</h2>
+                       <h2 class="display-6 text-center text-white">PENCARIAN PRODUK HUKUM</h2>
                    </div>
                </div>
            </div>
@@ -16,9 +16,9 @@
                </div>
            </div>
        </section>
+       <waves-white fill="#634882"></waves-white>
 
-       <section class="bg-success">
-           <waves-white fill="#FFFFFF"></waves-white>
+       <section class="container-fluid">
            <widget-left></widget-left>
        </section>
    </div>

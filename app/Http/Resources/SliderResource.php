@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class GaleriResource extends JsonResource
+class SliderResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,10 +17,9 @@ class GaleriResource extends JsonResource
         return [
             'data' => parent::toArray($request),
             'links' => [
-                'store' => route('gallery.store'),
-                'show' => route('gallery.show', $this->gal_id),
-                'update' => route('gallery.update', $this->gal_id),
-                'destroy' => route('gallery.destroy', $this->gal_id),
+                'store' => route('slider.store'),
+                'update' => route('slider.update', $this->slide_id),
+                'destroy' => route('slider.destroy', $this->slide_id)
             ]
         ];
     }

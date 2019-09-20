@@ -69,6 +69,15 @@ class QueryRepository
         return $data;
     }
 
+    public static function beritaPopuler()
+    {
+        $data = Berita::with('category')
+            ->orderBy('berita_hit', 'desc')
+            ->where('berita_aktif', true)
+            ->with('user');
+        return $data;
+    }
+
     public static function beritaDetail($slug)
     {
         $data =  Berita::with('category')->orderBy('created_at', 'desc')

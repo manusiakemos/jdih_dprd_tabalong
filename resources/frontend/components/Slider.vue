@@ -1,19 +1,16 @@
 <template>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators"
+                v-for="(v,i) in lists"
+                :data-slide-to="i"
+                :class="i == 0 ? 'active' : ''"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="assets/img/news/img01.jpg" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="assets/img/news/img01.jpg" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="assets/img/news/img01.jpg" alt="First slide">
+            <div
+                    v-for="(v,i) in lists"
+                    :class="i == 0 ? 'carousel-item active' : 'carousel-item'">
+                <img class="d-block w-100" height="400px" :src="v.slide_gambar" alt="First slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -26,3 +23,23 @@
         </a>
     </div>
 </template>
+
+<script>
+    export default {
+        data() {
+            return {
+                lists: ''
+            }
+        },
+        created() {
+            this.getData();
+        },
+        methods: {
+            getData() {
+                this.axios.get('api/web-slider').then(res => {
+                    this.lists = res.data;
+                })
+            },
+        },
+    }
+</script>

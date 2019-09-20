@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito|PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito|Montserrat|Open+Sans:600&display=swap');
 
-body, html{
-  font-family: 'Nunito', sans-serif !important;
+body, html {
+  font-family: 'Montserrat', sans-serif !important;
   background: color(body) !important;
+  font-size: 14px;
 }
 
 .display-1,
@@ -11,15 +12,16 @@ body, html{
 .display-4,
 .display-5,
 .display-6,
-.card{
-  font-family: 'PT Sans', sans-serif !important;
+.nav-link,
+.card {
+  font-family: 'Open Sans', sans-serif !important;
 }
 
-.card{
-  -webkit-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.30);
-  -moz-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.30);
-  box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.30);
-  .card-news-body{
+.card {
+  -webkit-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.30);
+  -moz-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.30);
+  box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.30);
+  .card-news-body {
     overflow-y: hidden !important;
   }
 }
@@ -28,87 +30,98 @@ body, html{
   height: 230px !important;
 }*/
 
- .card-news{
+.card-news {
   height: 560px !important;
 }
 
-.bg-primary{
+.bg-primary {
   background: color(primary) !important;
 }
-.btn-primary{
+
+.btn-primary {
   background: color(primary) !important;
   border: lighten(color(primary), 5%) !important;
-  -webkit-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.30);
-  -moz-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.30);
-  box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.30);
+  -webkit-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.30);
+  -moz-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.30);
+  box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.30);
 }
 
-.bg-secondary{
+.bg-secondary {
   background: color(secondary) !important;
 }
-.btn-secondary{
+
+.btn-secondary {
   background: color(secondary) !important;
   border: lighten(color(secondary), 5%) !important;
-  -webkit-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.30);
-  -moz-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.30);
-  box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.30);
+  -webkit-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.30);
+  -moz-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.30);
+  box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.30);
 }
 
-.bg-info{
+.bg-info {
   background: color(info) !important;
 }
-.btn-info{
+
+.btn-info {
   background: color(info) !important;
   border: lighten(color(info), 5%) !important;
-  -webkit-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.50);
-  -moz-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.50);
-  box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.50);
+  -webkit-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.50);
+  -moz-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.50);
+  box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.50);
 }
-.text-info{
+
+.text-info {
   color: color(info) !important;
 }
 
-.bg-dark{
+.bg-dark {
   background: color(dark) !important;
 }
-.btn-dark{
+
+.btn-dark {
   background: color(dark) !important;
   border: lighten(color(dark), 5%) !important;
-  -webkit-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.30);
-  -moz-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.30);
-  box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.30);
+  -webkit-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.30);
+  -moz-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.30);
+  box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.30);
 }
 
-.bg-success{
+.bg-success {
   background: color(success) !important;
 }
-.text-success{
+
+.text-success {
   color: color(success) !important;
 }
-.btn-success{
+
+.btn-success {
   background: color(success) !important;
   border: lighten(color(success), 5%) !important;
-  -webkit-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.30);
-  -moz-box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.30);
-  box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.30);
+  -webkit-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.30);
+  -moz-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.30);
+  box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.30);
 }
 
-
-.form-control,.search {
+.form-control, .search {
   border: 2px solid transparent;
   height: 42px;
-  border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
   -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   -ms-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   -o-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-  -webkit-transition:all 150ms ease-in-out 0s;
-  -moz-transition:all 150ms ease-in-out 0s;
-  -ms-transition:all 150ms ease-in-out 0s;
-  -o-transition:all 150ms ease-in-out 0s;
-  transition:all 150ms ease-in-out 0s;
+  -webkit-transition: all 150ms ease-in-out 0s;
+  -moz-transition: all 150ms ease-in-out 0s;
+  -ms-transition: all 150ms ease-in-out 0s;
+  -o-transition: all 150ms ease-in-out 0s;
+  transition: all 150ms ease-in-out 0s;
 }
+
 .form-control:focus {
   border-color: #171717;
   -webkit-box-shadow: none;
@@ -123,7 +136,23 @@ body, html{
   border-width: 2px;
 }
 
-.my-border{
-  border-bottom: 2px solid !important;
+.my-border {
+  border-bottom: 3px solid !important;
   border-color: color('info') !important;
+}
+
+.card-columns {
+  @include media-breakpoint-only(xs) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 4;
+  }
+}
+
+#blueimp-gallery > a.close {
+  color: white !important;
 }

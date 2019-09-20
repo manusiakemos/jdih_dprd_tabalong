@@ -18,6 +18,10 @@ import Berita from './views/Berita';
 
 import Setting from  './views/Setting';
 
+import Gallery from  './views/Gallery';
+
+import Slider from  './views/Slider';
+
 import Halaman from  './views/Halaman';
 
 import Menu from  './views/Menu';
@@ -119,8 +123,22 @@ const router = new VueRouter({
           }
         },
         {
+          path: '/slider',
+          component: Slider,
+          meta: {
+            requiresAuth: true
+          }
+        },
+        {
           path: '/menu',
           component: Menu,
+          meta: {
+            requiresAuth: true
+          }
+        },
+        {
+          path: '/gallery',
+          component: Gallery,
           meta: {
             requiresAuth: true
           }
@@ -135,7 +153,6 @@ const router = new VueRouter({
         }
       ]
     },
-
     {
       path: '/',
       component: Login,

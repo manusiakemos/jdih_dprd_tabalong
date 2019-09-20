@@ -52,6 +52,9 @@ axiosInstance.interceptors.response.use(function (response) {
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axiosInstance)
 
+// import Lightbox from 'vue-easy-lightbox'
+// Vue.use(Lightbox)
+
 // import VueSocialauth from 'vue-social-auth'
 
 // Vue.use(VueSocialauth, {

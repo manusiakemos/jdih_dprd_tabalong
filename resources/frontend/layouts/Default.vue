@@ -4,6 +4,23 @@
         <transition name="fade" mode="out-in">
             <router-view></router-view>
         </transition>
+        <!--begin section 3-->
+        <waves-white fill="#F9CE4C"></waves-white>
+        <section class="bg-success" id="section3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <h2 class="display-6 text-center">GALERI</h2>
+                        <gallery class="pb-5"></gallery>
+                    </div>
+                    <div class="col-lg-5">
+                        <h2 class="display-6 text-center">INFO VIDEO</h2>
+                        <video-profile class="pb-5"></video-profile>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--end section 3-->
        <footer-component></footer-component>
     </div>
 </template>
@@ -30,34 +47,22 @@
 <script>
     import Navbar from '../components/Navbar'
     import FooterComponent from '../components/Footer'
+    import Gallery from "../components/Gallery";
+    import VideoProfile from "../components/VideoProfil";
+    import WavesWhite from "../components/WavesWhite/WavesWhite";
 
     export default {
         components: {
             Navbar,
-            FooterComponent
+            FooterComponent,
+            Gallery,
+            VideoProfile,
+            WavesWhite
         },
         data() {
             return {
                 title: "Setting",
             };
-        },
-        mounted() {
-           // this.setMap();
-        },
-        methods:{
-           /* setMap(){
-                mapboxgl.accessToken = 'pk.eyJ1IjoibWFudXNpYWtlbW9zIiwiYSI6ImNqdzR2cHA5eDEyM3I0NnBjYXhmN3l0dWMifQ.gacuqFp1YJ_IkEERRO9Q7A';
-                var map = new mapboxgl.Map({
-                    container: 'map',
-                    style: 'mapbox://styles/mapbox/streets-v11',
-                    zoom: 15,
-                    center: ['115.41892449494185','-2.176045279407404']
-                });
-//2.1756352,115.4165891,17z
-                new mapboxgl.Marker()
-                    .setLngLat(['115.41892449494185','-2.176045279407404'])
-                    .addTo(map);
-            }*/
         }
     };
 </script>

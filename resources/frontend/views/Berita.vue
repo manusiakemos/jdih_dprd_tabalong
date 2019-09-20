@@ -22,7 +22,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-12 col-md-12 mb-3" v-for="value in lastData">
+                            <div class="col-lg-12 col-md-12 mb-1" v-for="value in lastData">
                                 <card-news :value="value"></card-news>
                             </div>
                             <button class="btn btn-info ml-3 mb-5" @click="next">Muat Lebih Banyak</button>

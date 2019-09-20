@@ -1,7 +1,7 @@
 $colors: (
         primary: #634882,
         secondary: #7e70aa,
-        success: #ffe6a9,
+        success: #F9CE4C,
         info: #646AD8,
         warning: #ffa426,
         danger: #ee7879,
@@ -25,6 +25,6 @@ $colors: (
 );
 
 $font_weight: 400;
-$font_size: 14px;
+$font_size: 12px;
 
 $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px) !default;

@@ -60,6 +60,20 @@
 					</router-link>
 				</li>
 
+				<li class="nav-item"  v-if="user.role == 'super-admin' || user.role == 'admin'">
+					<router-link to="/gallery" class="nav-link">
+						<i class="fas fa-images"></i>
+						<span>Gallery</span>
+					</router-link>
+				</li>
+
+				<li class="nav-item"  v-if="user.role == 'super-admin' || user.role == 'admin'">
+					<router-link to="/slider" class="nav-link">
+						<i class="fas fa-sliders-h"></i>
+						<span>Slider</span>
+					</router-link>
+				</li>
+
 				<li class="menu-header">Lainnya</li>
 
 				<li class="nav-item" v-if="user.role == 'super-admin'">
@@ -74,6 +88,7 @@
 						<span>Setting</span>
 					</router-link>
 				</li>
+
 				<li class="nav-item">
 					<router-link to="/profile" class="nav-link">
 						<i class="fas fa-image"></i>

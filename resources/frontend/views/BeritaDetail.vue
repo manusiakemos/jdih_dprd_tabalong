@@ -16,16 +16,13 @@
                         </small>
                     </div>
                     <div class="d-block pt-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <img :src="berita.gambar"
-                                     alt="berita" loading="lazy" class="img-shadow" style="height: 40vw; width: 100%">
-                            </div>
-                        </div>
+                        <img :src="berita.gambar"
+                             alt="berita" loading="lazy" class="img-shadow" style="height: 40vw; width: 100%">
                         <div v-html="berita.content" class="mt-5"></div>
                     </div>
                 </div>
                 <div class="col-lg-4">
+                    <widget-left></widget-left>
 
                 </div>
             </div>
@@ -34,7 +31,11 @@
 </template>
 
 <script>
+    import WidgetLeft from "../components/WidgetLeft";
     export default {
+        components:{
+            WidgetLeft
+        },
         data() {
             return {
                 berita: "",
