@@ -3,9 +3,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <h1 class="display-6 text-capitalize mt-5 mb-3">
+                    <h4 class="display-6 text-capitalize mt-5 mb-3">
                         {{berita.judul}}
-                    </h1>
+                    </h4>
                     <div class="d-inline-block">
                         <small class="post-meta-date mr-3"><i class="fas fa-clock-o"></i>{{berita.created_at}}</small>
                         <small class="post-meta-category mr-3"><i class="fas fa-user"></i> {{berita.creator ?

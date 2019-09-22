@@ -1,9 +1,12 @@
 <template>
     <div id="defaultLayout">
         <navbar></navbar>
-        <transition name="fade" mode="out-in">
-            <router-view></router-view>
-        </transition>
+        <!-- end section 1-->
+       <div id="content-scroll-target">
+           <transition name="fade" mode="out-in">
+               <router-view></router-view>
+           </transition>
+       </div>
         <!--begin section 3-->
         <waves-white fill="#F9CE4C"></waves-white>
         <section class="bg-success" id="section3">
@@ -51,13 +54,14 @@
     import VideoProfile from "../components/VideoProfil";
     import WavesWhite from "../components/WavesWhite/WavesWhite";
 
+
     export default {
         components: {
             Navbar,
             FooterComponent,
             Gallery,
             VideoProfile,
-            WavesWhite
+            WavesWhite,
         },
         data() {
             return {

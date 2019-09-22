@@ -12,48 +12,51 @@ import Halaman from './views/Halaman'
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-    mode: 'history',
-    routes: [
-        {
-            path: '/',
-            component: Default,
-            children:[
-                {
-                    path: '/',
-                    name:'home',
-                    component: Home,
-                },
-                {
-                    path: '/home',
-                    component: Home,
-                },
-                {
-                    path: '/produk-hukum',
-                    name:'arsip',
-                    component: Arsip,
-                },
-                {
-                    path: '/berita',
-                    name:'berita',
-                    component: Berita,
-                },
-                {
-                    path: '/berita/:slug',
-                    name:'berita_detail',
-                    component: BeritaDetail,
-                },
-                {
-                    path: '/halaman/:halaman',
-                    name:'halaman',
-                    component: Halaman,
-                }
-            ]
+        mode: 'history',
+        routes: [
+            {
+                path: '/',
+                component: Default,
+                children: [
+                    {
+                        path: '/',
+                        name: 'home',
+                        component: Home,
+                    },
+                    {
+                        path: '/home',
+                        component: Home,
+                    },
+                    {
+                        path: '/produk-hukum',
+                        name: 'arsip',
+                        component: Arsip,
+                    },
+                    {
+                        path: '/berita',
+                        name: 'berita',
+                        component: Berita,
+                    },
+                    {
+                        path: '/berita/:slug',
+                        name: 'berita_detail',
+                        component: BeritaDetail,
+                    },
+                    {
+                        path: '/halaman/:halaman',
+                        name: 'halaman',
+                        component: Halaman,
+                    }
+                ]
+            }
+        ],
+        scrollBehavior(to, from, savedPosition) {
+            if (to.hash) {
+                return window.scrollTo({top: document.querySelector(to.hash).offsetTop, behavior: 'smooth'});
+            }
+            return window.scrollTo({top: 0, behavior: 'smooth'});
         }
-    ],
-    scrollBehavior (to, from, savedPosition) {
-        // return desired position
-        return { x: 0, y: 0 }
-    }
-});
+    })
+;
 
 export default router;

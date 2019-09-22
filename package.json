@@ -43,6 +43,8 @@
         "mapbox-gl-vue": "^2.0.2",
         "moment": "^2.24.0",
         "pusher-js": "^4.4.0",
+        "smartmenus": "^1.1.0",
+        "smartmenus-keyboard": "^0.4.0",
         "v-select2-component": "^0.3.8",
         "vue-axios": "^2.1.4",
         "vue-chartjs": "^3.4.2",

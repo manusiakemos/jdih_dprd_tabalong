@@ -71,6 +71,8 @@ require("jquery.nicescroll");
 window.initJs = function () {
   "use strict";
 
+  jQuery('#main-menu').smartmenus();
+
   // ChartJS
   if (window.Chart) {
     // Chart.defaults.global.defaultFontFamily = "'Nunito', 'Segoe UI', 'Arial'";

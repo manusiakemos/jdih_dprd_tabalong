@@ -1,20 +1,13 @@
 <template>
     <div>
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="display-4 mb-2 mt-5 text-uppercase">{{this.$route.params.halaman}}</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <hr>
+                <div class="col-lg-8">
+                    <h1 class="display-6 mb-2 mt-5 text-uppercase my-border">{{this.$route.params.halaman}}</h1>
                     <div v-html="data.hal_isi"></div>
+                </div>
+                <div class="col-lg-4">
+                    <widget-left></widget-left>
                 </div>
             </div>
         </div>
@@ -22,7 +15,11 @@
 </template>
 
 <script>
+    import WidgetLeft from "../components/WidgetLeft"
     export default {
+        components:{
+            WidgetLeft
+        },
         data() {
             return {
                 data: "",

@@ -1,13 +1,12 @@
 <template>
     <div>
         <main role="main">
-
-            <!-- Main jumbotron for a primary marketing message or call to action -->
+            <!--section 1-->
             <section class="bg-primary" id="section1">
                 <div class="jumbotron bg-primary text-center text-white m-0">
                     <div class="container">
                         <h1 class="display-4 d-sm-block">{{$store.state.app_name}}</h1>
-                        <p>Selamat Datang di Website Jaringan Dokumentasi dan Informasi Hukum DPRD Kabupaten
+                        <p>Jaringan Dokumentasi dan Informasi Hukum DPRD Kabupaten
                             Tabalong</p>
                     </div>
                 </div>
@@ -22,7 +21,6 @@
                 </div>
             </section>
             <waves-red fill="#634882"></waves-red>
-            <!-- end section 1-->
             <!--begin section 2-->
             <section id="section2">
                 <div class="container">

@@ -41,7 +41,7 @@
                 </div>
                <div class="row">
                    <div class="col-12">
-                       <button class="btn btn-block btn-dark mt-3 text-white" @click="next">Selanjutnya</button>
+                       <button class="btn btn-info mt-3 text-white" @click="next">Muat Lebih Banyak</button>
                    </div>
                </div>
             </div> <!-- /container fluid -->
