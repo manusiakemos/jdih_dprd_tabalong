@@ -21,7 +21,7 @@ class ApiController extends Controller
 
     public function gallery()
     {
-        $data = Galeri::latest()->paginate(16);
+        $data = Galeri::latest()->paginate(8);
         return $data;
     }
 

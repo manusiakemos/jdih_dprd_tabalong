@@ -12,11 +12,11 @@
         <section class="bg-success" id="section3">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7">
+                    <div class="col-lg-6">
                         <h2 class="display-6 text-center">GALERI</h2>
                         <gallery class="pb-5"></gallery>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-6">
                         <h2 class="display-6 text-center">INFO VIDEO</h2>
                         <video-profile class="pb-5"></video-profile>
                     </div>

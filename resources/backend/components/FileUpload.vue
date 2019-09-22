@@ -4,8 +4,10 @@
             <image-uploader
                     :preview="preview"
                     :className="['fileinput', { 'fileinput--loaded': hasImage }]"
-                    capture="environment"
+                    :capture="false"
                     :debug="1"
+                    :quality="0.5"
+                    :maxHeight="300"
                     doNotResize="gif"
                     :autoRotate="true"
                     outputFormat="verbose"
