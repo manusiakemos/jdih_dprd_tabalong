@@ -3,25 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ef6cf33a-b3a7-48c3-88d1-6df8407dfdd1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/frontend.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/frontend.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/frontend.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/frontend.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/backend/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/backend/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/frontend/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/frontend/components/Arsip.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/components/Arsip.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/frontend/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/components/Navbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/frontend/components/NavbarItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/components/NavbarItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/frontend/layouts/Default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/layouts/Default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/frontend/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/frontend/scss/_navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/scss/_navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/frontend/views/Arsip.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/views/Arsip.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/frontend/views/Berita.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/views/Berita.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/frontend/views/BeritaDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/views/BeritaDetail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/frontend/views/Halaman.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/views/Halaman.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/frontend/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/views/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -156,7 +139,6 @@
         <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" />
         <option value="$PROJECT_DIR$/resources/frontend/components/Slider.vue" />
-        <option value="$PROJECT_DIR$/resources/backend/bootstrap.js" />
         <option value="$PROJECT_DIR$/resources/frontend/bootstrap.js" />
         <option value="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/frontend/scss/_navbar.scss" />
@@ -170,6 +152,7 @@
         <option value="$PROJECT_DIR$/resources/frontend/components/Arsip.vue" />
         <option value="$PROJECT_DIR$/resources/frontend/views/Halaman.vue" />
         <option value="$PROJECT_DIR$/resources/frontend/views/Berita.vue" />
+        <option value="$PROJECT_DIR$/resources/backend/bootstrap.js" />
       </list>
     </option>
   </component>
@@ -447,7 +430,7 @@
       <workItem from="1568785093591" duration="22245000" />
       <workItem from="1568862597677" duration="28000" />
       <workItem from="1568864857870" duration="36536000" />
-      <workItem from="1569039334611" duration="10744000" />
+      <workItem from="1569039334611" duration="11413000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2">
       <created>1566958139556</created>
@@ -568,11 +551,18 @@
       <option name="project" value="LOCAL" />
       <updated>1568992520560</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="commit 18 navbar cahnges">
+      <created>1569134056328</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1569134056328</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="299778000" />
+    <option name="totallyTimeSpent" value="300447000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="817" extended-state="6" />
@@ -580,6 +570,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="File Transfer" order="11" weight="0.328125" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
@@ -598,7 +589,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="File Transfer" order="11" weight="0.328125" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
@@ -625,7 +615,8 @@
     <MESSAGE value="commit 15 news bugs fixed" />
     <MESSAGE value="commit 16 major changes include colors" />
     <MESSAGE value="commit 17 major changes include slider and gallery" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit 17 major changes include slider and gallery" />
+    <MESSAGE value="commit 18 navbar cahnges" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 18 navbar cahnges" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -833,13 +824,6 @@
         <state relative-caret-position="-3051" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/backend/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/frontend/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -977,6 +961,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/backend/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
         </state>
       </provider>
     </entry>
