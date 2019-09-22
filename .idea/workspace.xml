@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ef6cf33a-b3a7-48c3-88d1-6df8407dfdd1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/frontend.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/frontend.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/frontend.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/frontend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/backend/components/FileUpload.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/backend/components/FileUpload.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/frontend/layouts/Default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/layouts/Default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/frontend/scss/_misc.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/frontend/scss/_misc.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -443,7 +436,7 @@
       <workItem from="1568862597677" duration="28000" />
       <workItem from="1568864857870" duration="36536000" />
       <workItem from="1569039334611" duration="13076000" />
-      <workItem from="1569168121343" duration="1379000" />
+      <workItem from="1569168121343" duration="1563000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2">
       <created>1566958139556</created>
@@ -578,11 +571,18 @@
       <option name="project" value="LOCAL" />
       <updated>1569135869189</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="commit 20 bugs fixes">
+      <created>1569169705546</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1569169705546</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="303489000" />
+    <option name="totallyTimeSpent" value="303673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="817" extended-state="6" />
@@ -637,7 +637,8 @@
     <MESSAGE value="commit 17 major changes include slider and gallery" />
     <MESSAGE value="commit 18 navbar cahnges" />
     <MESSAGE value="commit 19 bugs fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit 19 bugs fixes" />
+    <MESSAGE value="commit 20 bugs fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 20 bugs fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

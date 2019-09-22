@@ -6,8 +6,8 @@ return [
         'name' => env('APP_NAME', 'JDIH DPRD TABALONG'),
         'short_name' => 'JDIH DPRD',
         'start_url' => '/',
-        'background_color' => '#75BEE1',
-        'theme_color' => '#75BEE1',
+        'background_color' => '#634882',
+        'theme_color' => '#634882',
         'display' => 'standalone',
         'orientation'=> 'any',
         'icons' => [
