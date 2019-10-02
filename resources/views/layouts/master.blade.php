@@ -13,7 +13,7 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/jquery.smartmenus/1.1.0/css/sm-mint/sm-mint.min.css"/>
     <link rel="stylesheet" href="{{ asset('css/frontend.css') }}">
-    @laravelPWA
+    {{--@laravelPWA--}}
 <body>
 {{--@include('components.navbar')--}}
 
